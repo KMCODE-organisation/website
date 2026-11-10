@@ -1,0 +1,19 @@
+# build
+dist/
+.astro/
+
+# deps
+node_modules/
+
+# logs
+*.log
+
+# env (dépôt public : jamais de secret versionné)
+.env
+.env.*
+
+# OS / éditeurs
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea/

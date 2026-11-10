@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "title": "KMCODE — Développement web et mobile",
+    "description": "KMCODE conçoit et développe des sites, applications web et mobiles sur mesure, du front-end au back-end."
+  },
+  "nav": {
+    "home": "Accueil",
+    "switchLang": "Switch to English",
+    "toggleTheme": "Changer de thème"
+  },
+  "home": {
+    "eyebrow": "Studio de développement",
+    "title": "Des produits numériques soignés, du premier commit à la mise en ligne.",
+    "subtitle": "Sites vitrines, applications web et mobiles : KMCODE vous accompagne de la conception au déploiement.",
+    "cta": "Découvrir nos services",
+    "services": {
+      "eyebrow": "Services",
+      "title": "Ce que nous faisons",
+      "web": { "title": "Web", "text": "Sites et applications rapides, accessibles et bien référencés." },
+      "mobile": { "title": "Mobile", "text": "Applications iOS et Android au rendu natif." },
+      "backend": { "title": "Back-end", "text": "API, bases de données et intégrations robustes." }
+    }
+  },
+  "footer": {
+    "rights": "Tous droits réservés."
+  }
+}

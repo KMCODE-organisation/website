@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "title": "KMCODE — Web and mobile development",
+    "description": "KMCODE designs and builds custom websites, web and mobile apps, from front-end to back-end."
+  },
+  "nav": {
+    "home": "Home",
+    "switchLang": "Passer en français",
+    "toggleTheme": "Toggle theme"
+  },
+  "home": {
+    "eyebrow": "Development studio",
+    "title": "Polished digital products, from first commit to launch.",
+    "subtitle": "Websites, web and mobile apps: KMCODE supports you from design to deployment.",
+    "cta": "Explore our services",
+    "services": {
+      "eyebrow": "Services",
+      "title": "What we do",
+      "web": { "title": "Web", "text": "Fast, accessible, search-friendly sites and apps." },
+      "mobile": { "title": "Mobile", "text": "iOS and Android apps with a native feel." },
+      "backend": { "title": "Back-end", "text": "Robust APIs, databases and integrations." }
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}
