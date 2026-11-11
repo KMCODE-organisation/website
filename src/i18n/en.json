@@ -775,7 +775,7 @@
         {
           "title": "11. Complaints and mediation",
           "text": [
-            "For any complaint, write to us at {email}. If no agreement is reached, you may use the consumer mediator free of charge: {mediator}.",
+            "For any complaint, write to us at {email}. If no agreement is reached, you may use a consumer mediator free of charge. {mediatorEn}",
             "These terms are governed by French law."
           ]
         },

@@ -775,7 +775,7 @@
         {
           "title": "11. Réclamations et médiation",
           "text": [
-            "Pour toute réclamation, écrivez-nous à {email}. À défaut d'accord, vous pouvez recourir gratuitement au médiateur de la consommation : {mediator}.",
+            "Pour toute réclamation, écrivez-nous à {email}. À défaut d'accord, vous pouvez recourir gratuitement à un médiateur de la consommation. {mediator}",
             "Les présentes conditions sont soumises au droit français."
           ]
         },
