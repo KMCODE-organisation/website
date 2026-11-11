@@ -1,0 +1,62 @@
+---
+// Page de contenu (données, à propos, pages légales) rendue depuis `pages.<page>` des fichiers i18n.
+// Chaque section : { title, text?: string[], list?: string[], table?: { head: string[], rows: string[][] } }.
+// « {email} », « {siren} »… sont remplacés par `textVars` (src/config.js).
+import CtaBanner from '../components/CtaBanner.astro';
+import { textVars } from '../config.js';
+import { defaultLocale, useTranslations } from '../i18n/index.js';
+
+const { page } = Astro.props;
+const t = useTranslations(Astro.currentLocale ?? defaultLocale);
+const fill = (s) => s.replace(/\{(\w+)\}/g, (m, k) => textVars[k] ?? m);
+const content = t(`pages.${page}`);
+const showCta = page === 'data' || page === 'about';
+---
+
+<section class="relative overflow-hidden">
+  <div class="pointer-events-none absolute -top-40 left-1/2 size-[36rem] -translate-x-1/2 rounded-full bg-primary/15 blur-[120px]" aria-hidden="true"></div>
+  <div class="relative mx-auto max-w-3xl px-4 pt-24 pb-12 sm:px-6">
+    <p class="eyebrow">{content.eyebrow}</p>
+    <h1 class="mt-6 text-4xl leading-tight font-bold sm:text-5xl">{content.title}</h1>
+    {content.intro && <p class="mt-6 text-lg text-base-content/70">{fill(content.intro)}</p>}
+    {content.updated && <p class="mt-4 text-sm text-base-content/50">{content.updated}</p>}
+  </div>
+</section>
+
+<div class="mx-auto max-w-3xl space-y-12 px-4 pb-24 sm:px-6">
+  {
+    content.sections.map((s) => (
+      <section>
+        <h2 class="text-2xl font-bold">{s.title}</h2>
+        {s.text?.map((p) => <p class="mt-4 text-base-content/80">{fill(p)}</p>)}
+        {s.list && (
+          <ul class="mt-4 space-y-2">
+            {s.list.map((li) => (
+              <li class="flex gap-3 text-base-content/80">
+                <span class="mt-2.5 size-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" />
+                <span>{fill(li)}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+        {s.table && (
+          <div class="mt-6 overflow-x-auto rounded-box border border-base-300">
+            <table class="table">
+              <thead>
+                <tr>{s.table.head.map((h) => <th class="text-base-content">{h}</th>)}</tr>
+              </thead>
+              <tbody>
+                {s.table.rows.map((row) => (
+                  <tr>{row.map((cell, i) => <td class:list={[i === 0 && 'font-semibold']}>{fill(cell)}</td>)}</tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+        {s.after?.map((p) => <p class="mt-4 text-sm text-base-content/60">{fill(p)}</p>)}
+      </section>
+    ))
+  }
+</div>
+
+{showCta && <CtaBanner />}

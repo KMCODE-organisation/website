@@ -1,7 +1,7 @@
 ---
 // Bandeau d'appel à l'action de fin de page.
 import Icon from './Icon.astro';
-import { contactEmail } from '../config.js';
+import { contactEmail, phone } from '../config.js';
 import { defaultLocale, useTranslations } from '../i18n/index.js';
 
 const t = useTranslations(Astro.currentLocale ?? defaultLocale);
@@ -16,6 +16,9 @@ const { title = t('cta.title'), text = t('cta.text') } = Astro.props;
       <Icon name="mail" class="size-5" />
       {t('cta.button')}
     </a>
+    <p class="mt-4 text-base-content/70">
+      {t('cta.phone')} <a href={phone.href} class="link font-semibold whitespace-nowrap">{phone.display}</a>
+    </p>
     <p class="mt-4 flex items-center justify-center gap-2 text-sm text-base-content/60">
       <Icon name="check" class="size-4 text-accent" />
       {t('cta.reassurance')}

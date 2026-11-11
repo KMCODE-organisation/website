@@ -1,19 +1,32 @@
 ---
 import Logo from './Logo.astro';
-import { contactEmail } from '../config.js';
-import { defaultLocale, useTranslations } from '../i18n/index.js';
+import Icon from './Icon.astro';
+import { contactEmail, phone } from '../config.js';
+import { defaultLocale, pathFor, useTranslations } from '../i18n/index.js';
 
-const t = useTranslations(Astro.currentLocale ?? defaultLocale);
+const locale = Astro.currentLocale ?? defaultLocale;
+const t = useTranslations(locale);
 const year = new Date().getFullYear();
+const pages = ['data', 'about', 'terms', 'privacy', 'legal'];
 ---
 
 <footer class="border-t border-base-300/60">
-  <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-10 text-sm text-base-content/60 sm:flex-row sm:px-6">
+  <div class="mx-auto grid max-w-6xl gap-8 px-4 py-10 text-sm text-base-content/60 sm:grid-cols-[1.4fr_1fr_1fr] sm:px-6">
     <div class="flex flex-col items-center sm:items-start">
       <Logo height={26} />
       <p class="mt-2">{t('footer.tagline')}</p>
+      <p class="mt-2 flex items-center gap-2">
+        <Icon name="mapPin" class="size-4 text-accent" />
+        {t('footer.zone')}
+      </p>
     </div>
-    <a href={`mailto:${contactEmail}`} class="link link-hover">{contactEmail}</a>
-    <p>© {year} KMCODE — {t('footer.rights')}</p>
+    <ul class="flex flex-col items-center gap-2 sm:items-start">
+      <li><a href={`mailto:${contactEmail}`} class="link link-hover inline-flex items-center gap-2"><Icon name="mail" class="size-4" />{contactEmail}</a></li>
+      <li><a href={phone.href} class="link link-hover inline-flex items-center gap-2"><Icon name="phone" class="size-4" />{phone.display}</a></li>
+    </ul>
+    <ul class="flex flex-col items-center gap-2 sm:items-start">
+      {pages.map((key) => <li><a href={pathFor(key, locale)} class="link link-hover">{t(`footer.${key}`)}</a></li>)}
+    </ul>
   </div>
+  <p class="border-t border-base-300/60 px-4 py-6 text-center text-xs text-base-content/50">© {year} KMCODE — {t('footer.rights')}</p>
 </footer>

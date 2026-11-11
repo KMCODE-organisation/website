@@ -10,6 +10,11 @@ export const locales = Object.keys(dictionaries);
 export const routes = {
   home: { fr: '', en: '' },
   offers: { fr: 'offres', en: 'offers' },
+  data: { fr: 'vos-donnees', en: 'your-data' },
+  about: { fr: 'qui-sommes-nous', en: 'about' },
+  legal: { fr: 'mentions-legales', en: 'legal-notice' },
+  privacy: { fr: 'confidentialite', en: 'privacy' },
+  terms: { fr: 'cgv', en: 'terms' },
 };
 
 const lookup = (dict, key) => key.split('.').reduce((node, part) => node?.[part], dict);

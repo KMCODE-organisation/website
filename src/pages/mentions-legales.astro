@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContentPage from '../views/ContentPage.astro';
+import { useTranslations } from '../i18n/index.js';
+
+const t = useTranslations('fr');
+---
+
+<BaseLayout title={`${t('pages.legal.title')} — KMCODE`} description={t('pages.legal.description')}>
+  <ContentPage page="legal" />
+</BaseLayout>
