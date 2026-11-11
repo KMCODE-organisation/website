@@ -3,11 +3,11 @@ export const contactEmail = 'contact@kmcode.fr';
 export const phone = { display: '07 81 93 81 54', href: 'tel:+33781938154' };
 
 // Identité légale (mentions légales, CGV, confidentialité). Source : annuaire des entreprises
-// (SIREN 993 201 334) + Kevin, 2026-11-11. `capital` et `mediator` : à compléter par Kevin.
+// (SIREN 993 201 334) + Kevin, 2026-11-11 (adresse et TVA confirmées). `mediator` : à compléter par Kevin.
 export const company = {
   name: 'KMCODE',
   form: 'SASU',
-  capital: 'À COMPLÉTER',
+  capital: '1 000 €',
   siren: '993 201 334',
   rcs: 'RCS Montpellier 993 201 334',
   vat: 'FR15993201334',
