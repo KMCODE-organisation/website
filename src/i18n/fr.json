@@ -1,27 +1,142 @@
 {
   "meta": {
-    "title": "KMCODE — Développement web et mobile",
-    "description": "KMCODE conçoit et développe des sites, applications web et mobiles sur mesure, du front-end au back-end."
+    "title": "KMCODE — Installation domotique sur mesure",
+    "description": "KMCODE conçoit et installe votre maison connectée : éclairage, chauffage, volets, sécurité et suivi d'énergie, pilotés depuis une seule application."
   },
   "nav": {
     "home": "Accueil",
+    "solutions": "Solutions",
+    "method": "Méthode",
+    "faq": "FAQ",
+    "cta": "Devis gratuit",
     "switchLang": "Switch to English",
     "toggleTheme": "Changer de thème"
   },
-  "home": {
-    "eyebrow": "Studio de développement",
-    "title": "Des produits numériques soignés, du premier commit à la mise en ligne.",
-    "subtitle": "Sites vitrines, applications web et mobiles : KMCODE vous accompagne de la conception au déploiement.",
-    "cta": "Découvrir nos services",
-    "services": {
-      "eyebrow": "Services",
-      "title": "Ce que nous faisons",
-      "web": { "title": "Web", "text": "Sites et applications rapides, accessibles et bien référencés." },
-      "mobile": { "title": "Mobile", "text": "Applications iOS et Android au rendu natif." },
-      "backend": { "title": "Back-end", "text": "API, bases de données et intégrations robustes." }
+  "hero": {
+    "eyebrow": "Installation domotique",
+    "titleStart": "Une maison qui",
+    "titleHighlight": "s'occupe de vous.",
+    "subtitle": "Éclairage, chauffage, volets, sécurité : KMCODE conçoit et installe votre maison connectée, pilotée depuis une seule application. Simple, fiable, sans gros travaux.",
+    "ctaPrimary": "Demander un devis gratuit",
+    "ctaSecondary": "Voir les solutions",
+    "reassurance": "Gratuit et sans engagement"
+  },
+  "trust": {
+    "quote": "Devis gratuit et détaillé",
+    "works": "Peu ou pas de travaux",
+    "compat": "Compatible avec l'existant",
+    "local": "Fonctionne même sans internet"
+  },
+  "problem": {
+    "eyebrow": "Pourquoi la domotique",
+    "title": "Moins de gestes, moins de factures, plus de sérénité.",
+    "items": {
+      "comfort": {
+        "title": "Confort",
+        "text": "Les lumières, volets et ambiances s'adaptent à vos habitudes. Un scénario, et toute la maison suit."
+      },
+      "savings": {
+        "title": "Économies",
+        "text": "Un chauffage qui suit votre présence et un suivi clair de vos consommations : vous voyez enfin où part l'énergie."
+      },
+      "security": {
+        "title": "Sécurité",
+        "text": "Alertes, simulation de présence et contrôle d'accès : vous savez ce qui se passe chez vous, où que vous soyez."
+      }
     }
   },
+  "solutions": {
+    "eyebrow": "Solutions",
+    "title": "Tout ce que votre maison peut faire pour vous",
+    "subtitle": "Chaque installation est pensée pour votre logement. Commencez par une pièce ou équipez toute la maison.",
+    "items": {
+      "lighting": {
+        "title": "Éclairage intelligent",
+        "text": "Variation, scènes, détection de présence et allumage automatique au coucher du soleil."
+      },
+      "climate": {
+        "title": "Chauffage et climatisation",
+        "text": "Thermostats connectés et programmation pièce par pièce pour un confort constant."
+      },
+      "shutters": {
+        "title": "Volets et portail",
+        "text": "Ouverture selon l'heure, la météo ou l'ensoleillement, et commande centralisée."
+      },
+      "security": {
+        "title": "Sécurité et alarme",
+        "text": "Détecteurs, caméras, serrures connectées et notifications en temps réel."
+      },
+      "energy": {
+        "title": "Suivi de l'énergie",
+        "text": "Consommation en direct, appareils énergivores identifiés, pilotage des heures creuses."
+      },
+      "control": {
+        "title": "Pilotage centralisé",
+        "text": "Une application, la voix ou des interrupteurs : chacun contrôle la maison à sa manière."
+      }
+    }
+  },
+  "method": {
+    "eyebrow": "Méthode",
+    "title": "De l'idée à la maison connectée, en quatre étapes",
+    "steps": {
+      "audit": {
+        "title": "Échange et audit",
+        "text": "Nous faisons le point sur vos besoins, votre logement et vos équipements actuels."
+      },
+      "proposal": {
+        "title": "Proposition sur mesure",
+        "text": "Vous recevez un devis clair et détaillé, sans surprise, adapté à votre budget."
+      },
+      "install": {
+        "title": "Installation et configuration",
+        "text": "Pose propre, paramétrage complet et création de vos scénarios du quotidien."
+      },
+      "handover": {
+        "title": "Prise en main et suivi",
+        "text": "Nous vous formons à l'utilisation et restons disponibles pour faire évoluer l'installation."
+      }
+    }
+  },
+  "tech": {
+    "eyebrow": "Compatibilité",
+    "title": "Des standards ouverts, pas de dépendance à une marque",
+    "text": "Nous travaillons avec les protocoles et écosystèmes du marché pour que votre installation reste évolutive."
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Vos questions",
+    "items": {
+      "works": {
+        "q": "Faut-il faire des travaux ?",
+        "a": "Le plus souvent, non. Beaucoup d'équipements sont sans fil et se posent à la place des interrupteurs ou prises existants. Nous privilégions toujours la solution la moins invasive."
+      },
+      "existing": {
+        "q": "Mes équipements actuels sont-ils compatibles ?",
+        "a": "Dans bien des cas, oui : chaudière, volets motorisés, box ou assistant vocal peuvent souvent être intégrés. L'audit permet de le vérifier précisément."
+      },
+      "internet": {
+        "q": "Que se passe-t-il en cas de coupure internet ?",
+        "a": "Nous privilégions un pilotage local : les automatismes continuent de fonctionner chez vous, seul l'accès à distance est suspendu le temps de la coupure."
+      },
+      "price": {
+        "q": "Combien coûte une installation ?",
+        "a": "Cela dépend de la taille du logement et des fonctions souhaitées. Le devis est gratuit et détaillé ligne par ligne, et l'on peut commencer petit puis compléter."
+      },
+      "privacy": {
+        "q": "Mes données restent-elles privées ?",
+        "a": "Oui. Avec un pilotage local, vos données restent chez vous. Nous vous expliquons clairement ce qui passe, ou non, par des services en ligne."
+      }
+    }
+  },
+  "cta": {
+    "title": "Prêt à rendre votre maison plus intelligente ?",
+    "text": "Décrivez-nous votre projet : nous revenons vers vous avec une première proposition.",
+    "button": "Nous écrire",
+    "reassurance": "Devis gratuit et sans engagement"
+  },
   "footer": {
+    "tagline": "Installation domotique sur mesure.",
     "rights": "Tous droits réservés."
   }
 }

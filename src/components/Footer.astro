@@ -1,4 +1,6 @@
 ---
+import Logo from './Logo.astro';
+import { contactEmail } from '../config.js';
 import { defaultLocale, useTranslations } from '../i18n/index.js';
 
 const t = useTranslations(Astro.currentLocale ?? defaultLocale);
@@ -6,7 +8,12 @@ const year = new Date().getFullYear();
 ---
 
 <footer class="border-t border-base-300/60">
-  <div class="mx-auto max-w-6xl px-4 py-8 text-center text-xs text-base-content/60 sm:px-6">
-    © {year} KMCODE — {t('footer.rights')}
+  <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-10 text-sm text-base-content/60 sm:flex-row sm:px-6">
+    <div class="flex flex-col items-center sm:items-start">
+      <Logo height={26} />
+      <p class="mt-2">{t('footer.tagline')}</p>
+    </div>
+    <a href={`mailto:${contactEmail}`} class="link link-hover">{contactEmail}</a>
+    <p>© {year} KMCODE — {t('footer.rights')}</p>
   </div>
 </footer>

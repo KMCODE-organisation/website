@@ -1,0 +1,99 @@
+---
+// Illustration du hero : un hub central relié aux équipements de la maison,
+// en hexagones (clin d'œil « réseau » façon IT), flux de données animés en CSS.
+import Icon from './Icon.astro';
+
+const C = 220; // centre du viewBox
+const R = 160; // rayon de l'anneau d'équipements
+
+const hexPoints = (cx, cy, r) =>
+  Array.from({ length: 6 }, (_, k) => {
+    const a = ((60 * k - 90) * Math.PI) / 180;
+    return `${(cx + r * Math.cos(a)).toFixed(1)},${(cy + r * Math.sin(a)).toFixed(1)}`;
+  }).join(' ');
+
+const devices = ['lightbulb', 'thermometer', 'blinds', 'lock', 'zap', 'smartphone'].map((icon, k) => {
+  const a = ((60 * k - 90) * Math.PI) / 180;
+  return { icon, x: C + R * Math.cos(a), y: C + R * Math.sin(a), tone: k % 2 ? 'accent' : 'primary' };
+});
+---
+
+<div class="hero-visual relative mx-auto aspect-square w-full max-w-md" aria-hidden="true">
+  <svg viewBox="0 0 440 440" class="absolute inset-0 size-full overflow-visible">
+    <polygon points={hexPoints(C, C, R)} class="fill-none stroke-base-content/10" stroke-width="1" />
+    {
+      devices.map((d, i) => (
+        <line
+          x1={C}
+          y1={C}
+          x2={d.x}
+          y2={d.y}
+          class:list={['flow', d.tone === 'accent' ? 'stroke-accent' : 'stroke-primary']}
+          style={`animation-delay: ${i * -0.4}s`}
+        />
+      ))
+    }
+    <polygon points={hexPoints(C, C, 62)} class="pulse fill-none stroke-primary" stroke-width="1.5" />
+    <polygon points={hexPoints(C, C, 62)} class="pulse fill-none stroke-accent" stroke-width="1.5" style="animation-delay: -1.5s" />
+    <polygon points={hexPoints(C, C, 62)} class="fill-primary" />
+    {
+      devices.map((d, i) => (
+        <g class="node" style={`animation-delay: ${i * -0.8}s`}>
+          <polygon points={hexPoints(d.x, d.y, 38)} class="fill-base-200 stroke-base-300" stroke-width="1.5" />
+          <svg x={d.x - 13} y={d.y - 13} width="26" height="26" class={d.tone === 'accent' ? 'text-accent' : 'text-primary'}>
+            <Icon name={d.icon} class="size-full" />
+          </svg>
+        </g>
+      ))
+    }
+    <svg x={C - 24} y={C - 24} width="48" height="48" class="text-primary-content">
+      <Icon name="house" class="size-full" />
+    </svg>
+  </svg>
+</div>
+
+<style>
+  .flow {
+    stroke-width: 2;
+    stroke-dasharray: 3 9;
+    stroke-linecap: round;
+    animation: flow 1.6s linear infinite;
+  }
+  .pulse {
+    transform-origin: 220px 220px;
+    animation: pulse 3s ease-out infinite;
+  }
+  .node {
+    animation: float 6s ease-in-out infinite;
+  }
+  @keyframes flow {
+    to {
+      stroke-dashoffset: -24;
+    }
+  }
+  @keyframes pulse {
+    from {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    to {
+      transform: scale(1.9);
+      opacity: 0;
+    }
+  }
+  @keyframes float {
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .flow,
+    .pulse,
+    .node {
+      animation: none;
+    }
+    .pulse {
+      display: none;
+    }
+  }
+</style>

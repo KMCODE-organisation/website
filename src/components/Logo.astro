@@ -1,0 +1,11 @@
+---
+// Logo horizontal : variante selon le thème actif (même principe que ThemeToggle).
+import { Image } from 'astro:assets';
+import logoDark from '../assets/brand/logo-dark.png';
+import logoLight from '../assets/brand/logo-light.png';
+
+const { height = 32, class: className = '' } = Astro.props;
+---
+
+<Image src={logoDark} alt="KMCODE" height={height} densities={[1, 2]} loading="eager" class:list={['w-auto in-data-[theme=kmcode-light]:hidden', className]} />
+<Image src={logoLight} alt="KMCODE" height={height} densities={[1, 2]} loading="eager" class:list={['hidden w-auto in-data-[theme=kmcode-light]:block', className]} />

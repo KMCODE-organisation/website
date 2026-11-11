@@ -1,32 +1,206 @@
 ---
+import Icon from '../components/Icon.astro';
+import HeroVisual from '../components/HeroVisual.astro';
+import { contactEmail } from '../config.js';
 import { defaultLocale, useTranslations } from '../i18n/index.js';
 
 const t = useTranslations(Astro.currentLocale ?? defaultLocale);
-const services = ['web', 'mobile', 'backend'];
+
+const trust = [
+  { key: 'quote', icon: 'file' },
+  { key: 'works', icon: 'wrench' },
+  { key: 'compat', icon: 'puzzle' },
+  { key: 'local', icon: 'cpu' },
+];
+const benefits = [
+  { key: 'comfort', icon: 'house' },
+  { key: 'savings', icon: 'zap' },
+  { key: 'security', icon: 'shield' },
+];
+const solutions = [
+  { key: 'lighting', icon: 'lightbulb' },
+  { key: 'climate', icon: 'thermometer' },
+  { key: 'shutters', icon: 'blinds' },
+  { key: 'security', icon: 'lock' },
+  { key: 'energy', icon: 'zap' },
+  { key: 'control', icon: 'smartphone' },
+];
+const steps = ['audit', 'proposal', 'install', 'handover'];
+const technologies = ['Matter', 'Zigbee', 'Z-Wave', 'Thread', 'Wi-Fi', 'Home Assistant', 'Apple Home', 'Google Home', 'Amazon Alexa'];
+const faq = ['works', 'existing', 'internet', 'price', 'privacy'];
+const mailto = `mailto:${contactEmail}`;
 ---
 
-<section class="mx-auto flex min-h-[calc(100dvh-4rem)] max-w-6xl flex-col justify-center px-4 py-24 sm:px-6">
-  <p class="eyebrow">{t('home.eyebrow')}</p>
-  <h1 class="mt-6 max-w-3xl text-4xl font-bold leading-tight sm:text-6xl">{t('home.title')}</h1>
-  <p class="mt-6 max-w-2xl text-lg text-base-content/70">{t('home.subtitle')}</p>
-  <div class="mt-10">
-    <a href="#services" class="btn btn-primary btn-lg px-8">{t('home.cta')}</a>
+<!-- Hero -->
+<section class="relative overflow-hidden">
+  <div class="hero-grid pointer-events-none absolute inset-0" aria-hidden="true"></div>
+  <div class="pointer-events-none absolute -top-40 -left-40 size-[32rem] rounded-full bg-primary/25 blur-[120px]" aria-hidden="true"></div>
+  <div class="pointer-events-none absolute -right-40 bottom-0 size-[28rem] rounded-full bg-accent/15 blur-[120px]" aria-hidden="true"></div>
+
+  <div class="relative mx-auto grid min-h-[calc(100dvh-4rem)] max-w-6xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[1.1fr_1fr]">
+    <div>
+      <p class="eyebrow">{t('hero.eyebrow')}</p>
+      <h1 class="mt-6 text-4xl leading-[1.1] font-bold sm:text-6xl">
+        {t('hero.titleStart')} <span class="text-gradient">{t('hero.titleHighlight')}</span>
+      </h1>
+      <p class="mt-6 max-w-xl text-lg text-base-content/70">{t('hero.subtitle')}</p>
+      <div class="mt-10 flex flex-wrap gap-3">
+        <a href={mailto} class="btn btn-lg btn-primary px-8">
+          {t('hero.ctaPrimary')}
+          <Icon name="arrowRight" class="size-5" />
+        </a>
+        <a href="#solutions" class="btn btn-lg btn-outline border-base-content/20 px-8">{t('hero.ctaSecondary')}</a>
+      </div>
+      <p class="mt-4 flex items-center gap-2 text-sm text-base-content/60">
+        <Icon name="check" class="size-4 text-accent" />
+        {t('hero.reassurance')}
+      </p>
+    </div>
+    <HeroVisual />
   </div>
 </section>
 
-<section id="services" class="mx-auto max-w-6xl scroll-mt-16 px-4 py-24 sm:px-6">
-  <p class="eyebrow">{t('home.services.eyebrow')}</p>
-  <h2 class="mt-4 text-3xl font-bold sm:text-4xl">{t('home.services.title')}</h2>
+<!-- Engagements -->
+<section class="border-y border-base-300 bg-base-200/50">
+  <ul class="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-4 py-8 sm:px-6 lg:grid-cols-4">
+    {
+      trust.map(({ key, icon }) => (
+        <li class="flex items-center gap-3 text-sm font-medium">
+          <span class="grid size-10 shrink-0 place-items-center rounded-full bg-accent/15 text-accent">
+            <Icon name={icon} class="size-5" />
+          </span>
+          {t(`trust.${key}`)}
+        </li>
+      ))
+    }
+  </ul>
+</section>
+
+<!-- Bénéfices -->
+<section class="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+  <div data-reveal>
+    <p class="eyebrow">{t('problem.eyebrow')}</p>
+    <h2 class="mt-4 max-w-2xl text-3xl font-bold sm:text-4xl">{t('problem.title')}</h2>
+  </div>
   <div class="mt-12 grid gap-6 md:grid-cols-3">
     {
-      services.map((key) => (
-        <article class="card border border-base-300 bg-base-200">
-          <div class="card-body">
-            <h3 class="card-title text-xl">{t(`home.services.${key}.title`)}</h3>
-            <p class="text-base-content/70">{t(`home.services.${key}.text`)}</p>
-          </div>
+      benefits.map(({ key, icon }) => (
+        <article data-reveal class="rounded-box border border-base-300 p-8">
+          <Icon name={icon} class="size-8 text-primary" />
+          <h3 class="mt-6 text-xl font-bold">{t(`problem.items.${key}.title`)}</h3>
+          <p class="mt-3 text-base-content/70">{t(`problem.items.${key}.text`)}</p>
         </article>
       ))
     }
   </div>
 </section>
+
+<!-- Solutions -->
+<section id="solutions" class="scroll-mt-16 bg-base-200/50 py-24">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div data-reveal class="max-w-2xl">
+      <p class="eyebrow">{t('solutions.eyebrow')}</p>
+      <h2 class="mt-4 text-3xl font-bold sm:text-4xl">{t('solutions.title')}</h2>
+      <p class="mt-4 text-base-content/70">{t('solutions.subtitle')}</p>
+    </div>
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        solutions.map(({ key, icon }) => (
+          <article
+            data-reveal
+            class="group card border border-base-300 bg-base-100 transition duration-300 hover:-translate-y-1 hover:border-primary/60"
+          >
+            <div class="card-body gap-4 p-8">
+              <span class="grid size-12 place-items-center rounded-2xl bg-primary/10 text-primary transition group-hover:bg-primary group-hover:text-primary-content">
+                <Icon name={icon} class="size-6" />
+              </span>
+              <h3 class="card-title text-lg">{t(`solutions.items.${key}.title`)}</h3>
+              <p class="text-base-content/70">{t(`solutions.items.${key}.text`)}</p>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Méthode -->
+<section id="method" class="mx-auto max-w-6xl scroll-mt-16 px-4 py-24 sm:px-6">
+  <div data-reveal class="max-w-2xl">
+    <p class="eyebrow">{t('method.eyebrow')}</p>
+    <h2 class="mt-4 text-3xl font-bold sm:text-4xl">{t('method.title')}</h2>
+  </div>
+  <ol class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+    {
+      steps.map((key, i) => (
+        <li data-reveal class="relative rounded-box border border-base-300 p-8">
+          <span class="text-gradient text-5xl font-bold">{String(i + 1).padStart(2, '0')}</span>
+          <h3 class="mt-4 text-lg font-bold">{t(`method.steps.${key}.title`)}</h3>
+          <p class="mt-3 text-base-content/70">{t(`method.steps.${key}.text`)}</p>
+        </li>
+      ))
+    }
+  </ol>
+</section>
+
+<!-- Compatibilité -->
+<section class="border-y border-base-300 bg-base-200/50 py-20">
+  <div data-reveal class="mx-auto max-w-4xl px-4 text-center sm:px-6">
+    <p class="eyebrow">{t('tech.eyebrow')}</p>
+    <h2 class="mt-4 text-2xl font-bold sm:text-3xl">{t('tech.title')}</h2>
+    <p class="mx-auto mt-4 max-w-2xl text-base-content/70">{t('tech.text')}</p>
+    <ul class="mt-10 flex flex-wrap justify-center gap-3">
+      {technologies.map((name) => <li class="badge badge-lg badge-outline border-base-content/20 px-4 py-4 font-medium">{name}</li>)}
+    </ul>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="mx-auto max-w-3xl scroll-mt-16 px-4 py-24 sm:px-6">
+  <div data-reveal class="text-center">
+    <p class="eyebrow">{t('faq.eyebrow')}</p>
+    <h2 class="mt-4 text-3xl font-bold sm:text-4xl">{t('faq.title')}</h2>
+  </div>
+  <div class="mt-12 space-y-3">
+    {
+      faq.map((key, i) => (
+        <details class="collapse-plus collapse rounded-box border border-base-300 bg-base-200/50" name="faq" open={i === 0}>
+          <summary class="collapse-title font-semibold">{t(`faq.items.${key}.q`)}</summary>
+          <div class="collapse-content text-base-content/70">
+            <p>{t(`faq.items.${key}.a`)}</p>
+          </div>
+        </details>
+      ))
+    }
+  </div>
+</section>
+
+<!-- Appel à l'action final -->
+<section id="contact" class="scroll-mt-16 px-4 pb-24 sm:px-6">
+  <div
+    data-reveal
+    class="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] bg-primary px-6 py-16 text-center text-primary-content sm:px-16"
+  >
+    <div class="pointer-events-none absolute -top-24 -right-24 size-80 rounded-full bg-accent/40 blur-[100px]" aria-hidden="true"></div>
+    <div class="relative">
+      <h2 class="mx-auto max-w-2xl text-3xl font-bold sm:text-4xl">{t('cta.title')}</h2>
+      <p class="mx-auto mt-4 max-w-xl text-primary-content/80">{t('cta.text')}</p>
+      <a href={mailto} class="btn btn-lg mt-10 border-0 bg-white px-8 text-black hover:bg-white/90">
+        <Icon name="mail" class="size-5" />
+        {t('cta.button')}
+      </a>
+      <p class="mt-4 text-sm text-primary-content/70">{t('cta.reassurance')}</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Quadrillage discret, estompé vers les bords. */
+  .hero-grid {
+    background-image:
+      linear-gradient(to right, color-mix(in oklab, var(--color-base-content) 6%, transparent) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in oklab, var(--color-base-content) 6%, transparent) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+  }
+</style>

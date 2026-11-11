@@ -2,20 +2,38 @@
 import { getRelativeLocaleUrl } from 'astro:i18n';
 import LangSwitcher from './LangSwitcher.astro';
 import ThemeToggle from './ThemeToggle.astro';
+import Logo from './Logo.astro';
+import { contactEmail } from '../config.js';
 import { defaultLocale, useTranslations } from '../i18n/index.js';
 
 const locale = Astro.currentLocale ?? defaultLocale;
 const t = useTranslations(locale);
+const home = getRelativeLocaleUrl(locale);
+const links = ['solutions', 'method', 'faq'];
 ---
 
 <header class="sticky top-0 z-40 border-b border-base-300/60 bg-base-100/80 backdrop-blur">
-  <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-    <a href={getRelativeLocaleUrl(locale)} class="text-lg font-bold tracking-wide" aria-label={t('nav.home')}>
-      KMCODE
+  <div class="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
+    <a href={home} class="shrink-0" aria-label={t('nav.home')}>
+      <Logo height={30} />
     </a>
+    <nav class="hidden md:block">
+      <ul class="flex gap-8 text-sm font-medium text-base-content/70">
+        {
+          links.map((id) => (
+            <li>
+              <a href={`${home}#${id}`} class="transition hover:text-base-content">
+                {t(`nav.${id}`)}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
     <div class="flex items-center gap-2">
       <LangSwitcher />
       <ThemeToggle />
+      <a href={`mailto:${contactEmail}`} class="btn btn-sm btn-primary hidden sm:inline-flex">{t('nav.cta')}</a>
     </div>
   </div>
 </header>
