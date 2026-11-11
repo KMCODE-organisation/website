@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Offers from '../../views/Offers.astro';
+import { useTranslations } from '../../i18n/index.js';
+
+const t = useTranslations('en');
+---
+
+<BaseLayout title={t('meta.offersTitle')} description={t('meta.offersDescription')}>
+  <Offers />
+</BaseLayout>

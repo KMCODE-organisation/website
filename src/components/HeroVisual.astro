@@ -12,7 +12,7 @@ const hexPoints = (cx, cy, r) =>
     return `${(cx + r * Math.cos(a)).toFixed(1)},${(cy + r * Math.sin(a)).toFixed(1)}`;
   }).join(' ');
 
-const devices = ['lightbulb', 'thermometer', 'blinds', 'lock', 'zap', 'smartphone'].map((icon, k) => {
+const devices = ['lightbulb', 'thermometer', 'camera', 'mic', 'tablet', 'smartphone'].map((icon, k) => {
   const a = ((60 * k - 90) * Math.PI) / 180;
   return { icon, x: C + R * Math.cos(a), y: C + R * Math.sin(a), tone: k % 2 ? 'accent' : 'primary' };
 });

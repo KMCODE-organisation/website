@@ -1,34 +1,46 @@
 ---
 import Icon from '../components/Icon.astro';
 import HeroVisual from '../components/HeroVisual.astro';
+import PlanCards from '../components/PlanCards.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import { care, formatPrice } from '../data/pricing.js';
 import { contactEmail } from '../config.js';
-import { defaultLocale, useTranslations } from '../i18n/index.js';
+import { defaultLocale, pathFor, useTranslations } from '../i18n/index.js';
 
-const t = useTranslations(Astro.currentLocale ?? defaultLocale);
+const locale = Astro.currentLocale ?? defaultLocale;
+const t = useTranslations(locale);
+const offersUrl = pathFor('offers', locale);
 
 const trust = [
-  { key: 'quote', icon: 'file' },
-  { key: 'works', icon: 'wrench' },
-  { key: 'compat', icon: 'puzzle' },
-  { key: 'local', icon: 'cpu' },
+  { key: 'local', icon: 'house' },
+  { key: 'noSub', icon: 'key' },
+  { key: 'offline', icon: 'wifi' },
+  { key: 'owner', icon: 'shield' },
 ];
 const benefits = [
-  { key: 'comfort', icon: 'house' },
+  { key: 'comfort', icon: 'lightbulb' },
   { key: 'savings', icon: 'zap' },
-  { key: 'security', icon: 'shield' },
+  { key: 'security', icon: 'bell' },
 ];
 const solutions = [
   { key: 'lighting', icon: 'lightbulb' },
   { key: 'climate', icon: 'thermometer' },
-  { key: 'shutters', icon: 'blinds' },
-  { key: 'security', icon: 'lock' },
-  { key: 'energy', icon: 'zap' },
-  { key: 'control', icon: 'smartphone' },
+  { key: 'cameras', icon: 'camera' },
+  { key: 'voice', icon: 'mic' },
+  { key: 'tablet', icon: 'tablet' },
+  { key: 'remote', icon: 'smartphone' },
 ];
 const steps = ['audit', 'proposal', 'install', 'handover'];
-const technologies = ['Matter', 'Zigbee', 'Z-Wave', 'Thread', 'Wi-Fi', 'Home Assistant', 'Apple Home', 'Google Home', 'Amazon Alexa'];
-const faq = ['works', 'existing', 'internet', 'price', 'privacy'];
-const mailto = `mailto:${contactEmail}`;
+const privacy = [
+  { key: 'home', icon: 'house' },
+  { key: 'cameras', icon: 'eyeOff' },
+  { key: 'owner', icon: 'key' },
+  { key: 'leave', icon: 'logOut' },
+];
+// Marques déjà intégrées en production (doc d'offre, section « Capacités »).
+const brands = ['IKEA', 'Sonos', 'Bosch', 'LG', 'Xiaomi', 'Reolink', 'Sonoff', 'SwitchBot', 'Voltalis', 'iRobot Roomba'];
+const faq = ['subscription', 'hardware', 'works', 'internet', 'alarm', 'ai'];
 ---
 
 <!-- Hero -->
@@ -45,11 +57,11 @@ const mailto = `mailto:${contactEmail}`;
       </h1>
       <p class="mt-6 max-w-xl text-lg text-base-content/70">{t('hero.subtitle')}</p>
       <div class="mt-10 flex flex-wrap gap-3">
-        <a href={mailto} class="btn btn-lg btn-primary px-8">
+        <a href={offersUrl} class="btn btn-lg btn-primary px-8">
           {t('hero.ctaPrimary')}
           <Icon name="arrowRight" class="size-5" />
         </a>
-        <a href="#solutions" class="btn btn-lg btn-outline border-base-content/20 px-8">{t('hero.ctaSecondary')}</a>
+        <a href={`mailto:${contactEmail}`} class="btn btn-lg btn-outline border-base-content/20 px-8">{t('hero.ctaSecondary')}</a>
       </div>
       <p class="mt-4 flex items-center gap-2 text-sm text-base-content/60">
         <Icon name="check" class="size-4 text-accent" />
@@ -78,10 +90,7 @@ const mailto = `mailto:${contactEmail}`;
 
 <!-- Bénéfices -->
 <section class="mx-auto max-w-6xl px-4 py-24 sm:px-6">
-  <div data-reveal>
-    <p class="eyebrow">{t('problem.eyebrow')}</p>
-    <h2 class="mt-4 max-w-2xl text-3xl font-bold sm:text-4xl">{t('problem.title')}</h2>
-  </div>
+  <SectionHeading eyebrow={t('problem.eyebrow')} title={t('problem.title')} />
   <div class="mt-12 grid gap-6 md:grid-cols-3">
     {
       benefits.map(({ key, icon }) => (
@@ -98,11 +107,7 @@ const mailto = `mailto:${contactEmail}`;
 <!-- Solutions -->
 <section id="solutions" class="scroll-mt-16 bg-base-200/50 py-24">
   <div class="mx-auto max-w-6xl px-4 sm:px-6">
-    <div data-reveal class="max-w-2xl">
-      <p class="eyebrow">{t('solutions.eyebrow')}</p>
-      <h2 class="mt-4 text-3xl font-bold sm:text-4xl">{t('solutions.title')}</h2>
-      <p class="mt-4 text-base-content/70">{t('solutions.subtitle')}</p>
-    </div>
+    <SectionHeading eyebrow={t('solutions.eyebrow')} title={t('solutions.title')} subtitle={t('solutions.subtitle')} />
     <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {
         solutions.map(({ key, icon }) => (
@@ -124,43 +129,78 @@ const mailto = `mailto:${contactEmail}`;
   </div>
 </section>
 
-<!-- Méthode -->
-<section id="method" class="mx-auto max-w-6xl scroll-mt-16 px-4 py-24 sm:px-6">
-  <div data-reveal class="max-w-2xl">
-    <p class="eyebrow">{t('method.eyebrow')}</p>
-    <h2 class="mt-4 text-3xl font-bold sm:text-4xl">{t('method.title')}</h2>
+<!-- Offres -->
+<section id="offers" class="mx-auto max-w-6xl scroll-mt-16 px-4 py-24 sm:px-6">
+  <SectionHeading eyebrow={t('plans.eyebrow')} title={t('plans.title')} subtitle={t('plans.subtitle')} />
+  <div class="mt-12">
+    <PlanCards />
   </div>
-  <ol class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+  <div data-reveal class="mt-10 flex flex-col items-center justify-between gap-4 rounded-box border border-base-300 p-6 sm:flex-row">
+    <p class="flex items-center gap-3">
+      <Icon name="refresh" class="size-6 shrink-0 text-accent" />
+      <span>
+        <strong>{t('offers.careTitle')}</strong> — {t('common.from')}
+        {formatPrice(care.serenity, locale)}{t('common.perMonth')}, {t('offers.careValues.none').toLowerCase()}
+      </span>
+    </p>
+    <a href={offersUrl} class="btn btn-outline border-base-content/20">
+      {t('plans.seeAll')}
+      <Icon name="arrowRight" class="size-4" />
+    </a>
+  </div>
+</section>
+
+<!-- Méthode -->
+<section id="method" class="scroll-mt-16 bg-base-200/50 py-24">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <SectionHeading eyebrow={t('method.eyebrow')} title={t('method.title')} />
+    <ol class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      {
+        steps.map((key, i) => (
+          <li data-reveal class="relative rounded-box border border-base-300 bg-base-100 p-8">
+            <span class="text-gradient text-5xl font-bold">{String(i + 1).padStart(2, '0')}</span>
+            <h3 class="mt-4 text-lg font-bold">{t(`method.steps.${key}.title`)}</h3>
+            <p class="mt-3 text-base-content/70">{t(`method.steps.${key}.text`)}</p>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>
+
+<!-- Vos données -->
+<section class="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+  <SectionHeading eyebrow={t('privacy.eyebrow')} title={t('privacy.title')} subtitle={t('privacy.text')} />
+  <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
     {
-      steps.map((key, i) => (
-        <li data-reveal class="relative rounded-box border border-base-300 p-8">
-          <span class="text-gradient text-5xl font-bold">{String(i + 1).padStart(2, '0')}</span>
-          <h3 class="mt-4 text-lg font-bold">{t(`method.steps.${key}.title`)}</h3>
-          <p class="mt-3 text-base-content/70">{t(`method.steps.${key}.text`)}</p>
-        </li>
+      privacy.map(({ key, icon }) => (
+        <article data-reveal class="rounded-box border border-base-300 p-6">
+          <span class="grid size-11 place-items-center rounded-full bg-accent/15 text-accent">
+            <Icon name={icon} class="size-5" />
+          </span>
+          <h3 class="mt-5 font-bold">{t(`privacy.items.${key}.title`)}</h3>
+          <p class="mt-2 text-sm text-base-content/70">{t(`privacy.items.${key}.text`)}</p>
+        </article>
       ))
     }
-  </ol>
+  </div>
 </section>
 
 <!-- Compatibilité -->
 <section class="border-y border-base-300 bg-base-200/50 py-20">
   <div data-reveal class="mx-auto max-w-4xl px-4 text-center sm:px-6">
-    <p class="eyebrow">{t('tech.eyebrow')}</p>
-    <h2 class="mt-4 text-2xl font-bold sm:text-3xl">{t('tech.title')}</h2>
-    <p class="mx-auto mt-4 max-w-2xl text-base-content/70">{t('tech.text')}</p>
+    <p class="eyebrow">{t('brands.eyebrow')}</p>
+    <h2 class="mt-4 text-2xl font-bold sm:text-3xl">{t('brands.title')}</h2>
+    <p class="mx-auto mt-4 max-w-2xl text-base-content/70">{t('brands.text')}</p>
     <ul class="mt-10 flex flex-wrap justify-center gap-3">
-      {technologies.map((name) => <li class="badge badge-lg badge-outline border-base-content/20 px-4 py-4 font-medium">{name}</li>)}
+      {brands.map((name) => <li class="badge badge-lg badge-outline border-base-content/20 px-4 py-4 font-medium">{name}</li>)}
     </ul>
   </div>
 </section>
 
 <!-- FAQ -->
 <section id="faq" class="mx-auto max-w-3xl scroll-mt-16 px-4 py-24 sm:px-6">
-  <div data-reveal class="text-center">
-    <p class="eyebrow">{t('faq.eyebrow')}</p>
-    <h2 class="mt-4 text-3xl font-bold sm:text-4xl">{t('faq.title')}</h2>
-  </div>
+  <SectionHeading eyebrow={t('faq.eyebrow')} title={t('faq.title')} center />
   <div class="mt-12 space-y-3">
     {
       faq.map((key, i) => (
@@ -175,24 +215,7 @@ const mailto = `mailto:${contactEmail}`;
   </div>
 </section>
 
-<!-- Appel à l'action final -->
-<section id="contact" class="scroll-mt-16 px-4 pb-24 sm:px-6">
-  <div
-    data-reveal
-    class="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] bg-primary px-6 py-16 text-center text-primary-content sm:px-16"
-  >
-    <div class="pointer-events-none absolute -top-24 -right-24 size-80 rounded-full bg-accent/40 blur-[100px]" aria-hidden="true"></div>
-    <div class="relative">
-      <h2 class="mx-auto max-w-2xl text-3xl font-bold sm:text-4xl">{t('cta.title')}</h2>
-      <p class="mx-auto mt-4 max-w-xl text-primary-content/80">{t('cta.text')}</p>
-      <a href={mailto} class="btn btn-lg mt-10 border-0 bg-white px-8 text-black hover:bg-white/90">
-        <Icon name="mail" class="size-5" />
-        {t('cta.button')}
-      </a>
-      <p class="mt-4 text-sm text-primary-content/70">{t('cta.reassurance')}</p>
-    </div>
-  </div>
-</section>
+<CtaBanner />
 
 <style>
   /* Quadrillage discret, estompé vers les bords. */

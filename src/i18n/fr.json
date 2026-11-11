@@ -1,31 +1,44 @@
 {
   "meta": {
-    "title": "KMCODE — Installation domotique sur mesure",
-    "description": "KMCODE conçoit et installe votre maison connectée : éclairage, chauffage, volets, sécurité et suivi d'énergie, pilotés depuis une seule application."
+    "title": "KMCODE — Installation domotique privée et suivie",
+    "description": "KMCODE installe votre maison connectée : éclairage, chauffage, caméras intelligentes, assistant vocal. Vos données restent chez vous, sans abonnement obligatoire.",
+    "offersTitle": "Offres et tarifs — KMCODE",
+    "offersDescription": "Forfaits d'installation domotique de 490 € à 1 190 €, matériel au prix public, suivi Sérénité dès 19 €/mois sans engagement."
+  },
+  "common": {
+    "approx": "≈",
+    "from": "dès",
+    "perMonth": "/mois",
+    "perCamera": "par caméra",
+    "each": "pièce",
+    "plus": "+",
+    "included": "Inclus",
+    "colon": " :"
   },
   "nav": {
     "home": "Accueil",
     "solutions": "Solutions",
+    "offers": "Offres",
     "method": "Méthode",
     "faq": "FAQ",
-    "cta": "Devis gratuit",
+    "cta": "Nous contacter",
     "switchLang": "Switch to English",
     "toggleTheme": "Changer de thème"
   },
   "hero": {
     "eyebrow": "Installation domotique",
-    "titleStart": "Une maison qui",
-    "titleHighlight": "s'occupe de vous.",
-    "subtitle": "Éclairage, chauffage, volets, sécurité : KMCODE conçoit et installe votre maison connectée, pilotée depuis une seule application. Simple, fiable, sans gros travaux.",
-    "ctaPrimary": "Demander un devis gratuit",
-    "ctaSecondary": "Voir les solutions",
-    "reassurance": "Gratuit et sans engagement"
+    "titleStart": "Une maison connectée",
+    "titleHighlight": "qui reste chez vous.",
+    "subtitle": "Éclairage, chauffage, caméras, assistant vocal : KMCODE installe, configure et suit votre maison connectée. Vos données restent chez vous, et rien ne vous oblige à vous abonner.",
+    "ctaPrimary": "Découvrir les offres",
+    "ctaSecondary": "Nous écrire",
+    "reassurance": "Diagnostic à 79 €, déduit si vous commandez"
   },
   "trust": {
-    "quote": "Devis gratuit et détaillé",
-    "works": "Peu ou pas de travaux",
-    "compat": "Compatible avec l'existant",
-    "local": "Fonctionne même sans internet"
+    "local": "Vos données restent chez vous",
+    "noSub": "Sans abonnement obligatoire",
+    "offline": "Fonctionne même sans internet",
+    "owner": "Le matériel vous appartient"
   },
   "problem": {
     "eyebrow": "Pourquoi la domotique",
@@ -33,110 +46,299 @@
     "items": {
       "comfort": {
         "title": "Confort",
-        "text": "Les lumières, volets et ambiances s'adaptent à vos habitudes. Un scénario, et toute la maison suit."
+        "text": "Lumières, chauffage et ambiances suivent vos habitudes. Un mot ou un geste, et toute la maison s'adapte."
       },
       "savings": {
         "title": "Économies",
-        "text": "Un chauffage qui suit votre présence et un suivi clair de vos consommations : vous voyez enfin où part l'énergie."
+        "text": "Le chauffage s'ajuste à votre présence et vous voyez enfin, chaque jour, où part votre énergie."
       },
       "security": {
-        "title": "Sécurité",
-        "text": "Alertes, simulation de présence et contrôle d'accès : vous savez ce qui se passe chez vous, où que vous soyez."
+        "title": "Tranquillité",
+        "text": "Une personne devant la porte ? Vous recevez une notification avec la photo, où que vous soyez."
       }
     }
   },
   "solutions": {
-    "eyebrow": "Solutions",
+    "eyebrow": "Ce que nous installons",
     "title": "Tout ce que votre maison peut faire pour vous",
-    "subtitle": "Chaque installation est pensée pour votre logement. Commencez par une pièce ou équipez toute la maison.",
+    "subtitle": "Commencez par l'essentiel, puis complétez quand vous le souhaitez. Tout se pilote depuis un seul endroit.",
     "items": {
       "lighting": {
-        "title": "Éclairage intelligent",
-        "text": "Variation, scènes, détection de présence et allumage automatique au coucher du soleil."
+        "title": "Éclairage et ambiances",
+        "text": "Lumières qui s'allument à votre arrivée, scènes « soirée » ou « départ », extinction générale en un geste."
       },
       "climate": {
-        "title": "Chauffage et climatisation",
-        "text": "Thermostats connectés et programmation pièce par pièce pour un confort constant."
+        "title": "Chauffage et énergie",
+        "text": "Chauffage pièce par pièce, alertes fenêtre ouverte, suivi de votre consommation au quotidien."
       },
-      "shutters": {
-        "title": "Volets et portail",
-        "text": "Ouverture selon l'heure, la météo ou l'ensoleillement, et commande centralisée."
+      "cameras": {
+        "title": "Caméras intelligentes",
+        "text": "Elles reconnaissent une personne, vous préviennent avec une image et enregistrent chez vous, pas dans un cloud."
       },
-      "security": {
-        "title": "Sécurité et alarme",
-        "text": "Détecteurs, caméras, serrures connectées et notifications en temps réel."
+      "voice": {
+        "title": "Assistant vocal",
+        "text": "« Éteins tout sauf le salon », « il fait froid dans la chambre ? » : la maison vous répond."
       },
-      "energy": {
-        "title": "Suivi de l'énergie",
-        "text": "Consommation en direct, appareils énergivores identifiés, pilotage des heures creuses."
+      "tablet": {
+        "title": "Tablette murale",
+        "text": "Un écran fixé au mur pour voir et commander toute la maison d'un coup d'œil, pour toute la famille."
       },
-      "control": {
-        "title": "Pilotage centralisé",
-        "text": "Une application, la voix ou des interrupteurs : chacun contrôle la maison à sa manière."
+      "remote": {
+        "title": "Application et accès à distance",
+        "text": "Votre maison dans votre poche, de façon sécurisée, sans rien ouvrir sur votre box internet."
       }
+    }
+  },
+  "plans": {
+    "eyebrow": "Offres",
+    "title": "Des forfaits clairs, matériel compris dans le devis",
+    "subtitle": "Un forfait d'installation, le matériel au prix public, et un suivi facultatif. Vous savez exactement ce que vous payez.",
+    "labor": "Installation",
+    "hardware": "Matériel conseillé",
+    "popular": "Le plus complet",
+    "seeAll": "Voir le détail des offres",
+    "choose": "Demander ce forfait",
+    "essential": {
+      "name": "Essentiel",
+      "tagline": "Pour démarrer simplement.",
+      "features": [
+        "La box domotique installée et configurée",
+        "Jusqu'à 8 appareils connectés",
+        "Un tableau de bord sur mesure et l'application mobile",
+        "1 heure de prise en main avec vous"
+      ],
+      "hardwareText": "Box domotique et clé de connexion sans fil"
+    },
+    "comfort": {
+      "name": "Confort",
+      "tagline": "Toute la maison, pilotée du bout des doigts ou à la voix.",
+      "features": [
+        "Une box plus puissante, prête pour les caméras",
+        "Jusqu'à 20 appareils et 10 automatismes",
+        "Une tablette murale de commande",
+        "Un assistant vocal"
+      ],
+      "hardwareText": "Box performante, clé sans fil, tablette murale, assistant vocal"
+    },
+    "vigilance": {
+      "name": "Vigilance",
+      "tagline": "Des caméras qui comprennent ce qu'elles voient.",
+      "features": [
+        "Détection des personnes et de certains sons (pleurs de bébé)",
+        "Notification avec photo sur votre téléphone",
+        "Caméras motorisées pilotables à distance",
+        "Enregistrements gardés chez vous"
+      ],
+      "hardwareText": "Caméras au choix, sur la box performante (incluse dans Confort)"
     }
   },
   "method": {
     "eyebrow": "Méthode",
-    "title": "De l'idée à la maison connectée, en quatre étapes",
+    "title": "De la première discussion à la maison connectée",
     "steps": {
       "audit": {
-        "title": "Échange et audit",
-        "text": "Nous faisons le point sur vos besoins, votre logement et vos équipements actuels."
+        "title": "Diagnostic",
+        "text": "Visite ou visio : on fait le tour de vos besoins et de vos appareils. 79 €, déduits si vous commandez."
       },
       "proposal": {
-        "title": "Proposition sur mesure",
-        "text": "Vous recevez un devis clair et détaillé, sans surprise, adapté à votre budget."
+        "title": "Devis détaillé",
+        "text": "Le forfait adapté et la liste du matériel, au prix public. Vous pouvez aussi l'acheter vous-même."
       },
       "install": {
-        "title": "Installation et configuration",
-        "text": "Pose propre, paramétrage complet et création de vos scénarios du quotidien."
+        "title": "Installation et prise en main",
+        "text": "Nous installons, configurons vos scénarios du quotidien et vous montrons comment tout utiliser."
       },
       "handover": {
-        "title": "Prise en main et suivi",
-        "text": "Nous vous formons à l'utilisation et restons disponibles pour faire évoluer l'installation."
+        "title": "Suivi, si vous le souhaitez",
+        "text": "Avec l'abonnement Sérénité, nous veillons sur votre installation. Sans lui, tout continue de fonctionner."
       }
     }
   },
-  "tech": {
+  "privacy": {
+    "eyebrow": "Vos données",
+    "title": "Votre maison vous appartient, vos données aussi",
+    "text": "Tout fonctionne chez vous, sur votre box. Nos engagements sont écrits dans le contrat.",
+    "items": {
+      "home": {
+        "title": "Tout reste chez vous",
+        "text": "Historique, réglages et vidéos restent sur votre box. Rien n'est envoyé dans un cloud sans votre accord."
+      },
+      "cameras": {
+        "title": "Vos images sont à vous",
+        "text": "Nous nous engageons à ne jamais consulter vos caméras. Chacune de nos connexions de maintenance est enregistrée."
+      },
+      "owner": {
+        "title": "Vous êtes propriétaire",
+        "text": "Du matériel, des comptes, des mots de passe et des données. Vous pouvez couper notre accès à tout moment."
+      },
+      "leave": {
+        "title": "Libre de partir",
+        "text": "En fin de contrat, nous vous remettons tout et effaçons nos copies sous 30 jours."
+      }
+    }
+  },
+  "brands": {
     "eyebrow": "Compatibilité",
-    "title": "Des standards ouverts, pas de dépendance à une marque",
-    "text": "Nous travaillons avec les protocoles et écosystèmes du marché pour que votre installation reste évolutive."
+    "title": "Fonctionne avec les appareils que vous avez déjà",
+    "text": "Électroménager, enceintes, aspirateur robot, chauffage, éclairage : nous relions vos marques entre elles, sans vous enfermer dans l'une d'elles."
   },
   "faq": {
     "eyebrow": "FAQ",
     "title": "Vos questions",
     "items": {
+      "subscription": {
+        "q": "L'abonnement est-il obligatoire ?",
+        "a": "Non. Votre installation fonctionne sans abonnement et vous gardez tout. L'abonnement Sérénité ajoute la surveillance, les mises à jour et le dépannage à distance. Il est sans engagement."
+      },
+      "hardware": {
+        "q": "Qui achète le matériel ?",
+        "a": "Comme vous préférez : nous le fournissons au prix public, ou vous l'achetez vous-même sur la liste que nous vous remettons. Dans les deux cas, il vous appartient."
+      },
       "works": {
         "q": "Faut-il faire des travaux ?",
-        "a": "Le plus souvent, non. Beaucoup d'équipements sont sans fil et se posent à la place des interrupteurs ou prises existants. Nous privilégions toujours la solution la moins invasive."
-      },
-      "existing": {
-        "q": "Mes équipements actuels sont-ils compatibles ?",
-        "a": "Dans bien des cas, oui : chaudière, volets motorisés, box ou assistant vocal peuvent souvent être intégrés. L'audit permet de le vérifier précisément."
+        "a": "Le plus souvent, non : la plupart des équipements sont sans fil. Si votre projet touche au tableau électrique ou à des modules encastrés, un électricien partenaire assuré s'en charge, sur devis séparé."
       },
       "internet": {
         "q": "Que se passe-t-il en cas de coupure internet ?",
-        "a": "Nous privilégions un pilotage local : les automatismes continuent de fonctionner chez vous, seul l'accès à distance est suspendu le temps de la coupure."
+        "a": "La maison continue de fonctionner normalement, car tout tourne chez vous. Seul l'accès à distance est suspendu le temps de la coupure."
       },
-      "price": {
-        "q": "Combien coûte une installation ?",
-        "a": "Cela dépend de la taille du logement et des fonctions souhaitées. Le devis est gratuit et détaillé ligne par ligne, et l'on peut commencer petit puis compléter."
+      "alarm": {
+        "q": "Les caméras remplacent-elles une alarme ?",
+        "a": "Non. Elles détectent et vous préviennent, mais ne remplacent pas une alarme certifiée reconnue par les assureurs. Nous ne vendons pas d'alarme ni de télésurveillance."
       },
-      "privacy": {
-        "q": "Mes données restent-elles privées ?",
-        "a": "Oui. Avec un pilotage local, vos données restent chez vous. Nous vous expliquons clairement ce qui passe, ou non, par des services en ligne."
+      "ai": {
+        "q": "Et l'intelligence artificielle ?",
+        "a": "Elle est facultative et désactivée par défaut. Si vous l'activez (assistant vocal plus malin, alertes caméras décrites en une phrase), elle fonctionne sur votre propre compte, pour quelques euros par mois payés directement au fournisseur."
       }
     }
   },
   "cta": {
-    "title": "Prêt à rendre votre maison plus intelligente ?",
-    "text": "Décrivez-nous votre projet : nous revenons vers vous avec une première proposition.",
+    "title": "Parlons de votre maison",
+    "text": "Décrivez-nous votre projet : nous vous proposons un diagnostic et un devis clair.",
     "button": "Nous écrire",
-    "reassurance": "Devis gratuit et sans engagement"
+    "reassurance": "Diagnostic déduit si vous commandez"
+  },
+  "offers": {
+    "eyebrow": "Offres et tarifs",
+    "title": "Des prix clairs, sans surprise",
+    "subtitle": "Vous payez l'installation au forfait, le matériel au prix public, et seulement si vous le souhaitez, un suivi mensuel sans engagement.",
+    "how": {
+      "labor": {
+        "title": "Un forfait d'installation",
+        "text": "Installation, configuration, tableau de bord et prise en main. Un prix fixe, connu à l'avance."
+      },
+      "hardware": {
+        "title": "Le matériel au prix public",
+        "text": "Nous le fournissons au prix public, ou vous l'achetez vous-même sur notre liste. Il vous appartient."
+      },
+      "care": {
+        "title": "Un suivi facultatif",
+        "text": "L'abonnement Sérénité veille sur votre installation. Sans engagement, résiliable chaque mois."
+      }
+    },
+    "diagnostic": {
+      "title": "Tout commence par un diagnostic",
+      "text": "En visite ou en visio, nous faisons l'inventaire de vos appareils et de vos envies, puis vous remettons un devis détaillé.",
+      "note": "déduit si vous commandez"
+    },
+    "total": "Budget total estimé",
+    "hardwareTitle": "Le matériel, expliqué simplement",
+    "hardwareSubtitle": "Du matériel reconnu, choisi pour sa fiabilité. Prix constatés en novembre 2026, revus à chaque devis.",
+    "hardwareItems": {
+      "boxSimple": {
+        "name": "Box domotique",
+        "text": "Le cerveau de la maison, pour l'offre Essentiel. Compacte et silencieuse."
+      },
+      "boxPro": {
+        "name": "Box performante",
+        "text": "Plus puissante : indispensable pour les caméras intelligentes et l'assistant vocal."
+      },
+      "radio": {
+        "name": "Clé de connexion sans fil",
+        "text": "Elle permet à la box de dialoguer avec les capteurs, ampoules et prises connectés."
+      },
+      "voice": {
+        "name": "Assistant vocal",
+        "text": "Un petit haut-parleur qui écoute le mot d'activation, sans enregistrer vos conversations."
+      },
+      "tablet": {
+        "name": "Tablette murale",
+        "text": "Fixée au mur, écran éteint la nuit, conçue pour rester branchée en permanence."
+      },
+      "cameraIndoor": {
+        "name": "Caméra intérieure",
+        "text": "Discrète, en Wi-Fi, pour surveiller une pièce."
+      },
+      "cameraPtz": {
+        "name": "Caméra motorisée",
+        "text": "Elle pivote pour couvrir toute une pièce, pilotable depuis votre téléphone."
+      },
+      "cameraOutdoor": {
+        "name": "Caméra extérieure",
+        "text": "Haute définition, résistante aux intempéries, alimentée par son câble."
+      },
+      "doorbell": {
+        "name": "Sonnette vidéo",
+        "text": "Vous voyez qui sonne, avec une photo sur votre téléphone."
+      }
+    },
+    "optionsEyebrow": "À la carte",
+    "optionsTitle": "Options",
+    "optionsSubtitle": "À ajouter à n'importe quel forfait.",
+    "optionItems": {
+      "aiVoice": {
+        "name": "Assistant vocal intelligent",
+        "text": "Vous parlez naturellement à la maison, avec des commandes sur mesure.",
+        "extra": "+ assistant vocal"
+      },
+      "aiCameras": {
+        "name": "Alertes caméras décrites",
+        "text": "« Un livreur dépose un colis devant la porte » plutôt que « mouvement détecté »."
+      },
+      "extraDevice": {
+        "name": "Appareil supplémentaire",
+        "text": "Au-delà du nombre inclus dans votre forfait."
+      },
+      "extraAutomation": {
+        "name": "Automatisme supplémentaire",
+        "text": "Un nouveau scénario sur mesure."
+      },
+      "hour": {
+        "name": "Heure d'intervention",
+        "text": "Pour toute demande hors forfait."
+      }
+    },
+    "aiNote": "Les options d'intelligence artificielle sont activées par vous et fonctionnent sur votre propre compte : quelques euros par mois, payés directement au fournisseur.",
+    "careEyebrow": "Suivi",
+    "careTitle": "Abonnements Sérénité",
+    "careSubtitle": "Nous veillons sur votre installation pour qu'elle reste fiable, à jour et sauvegardée.",
+    "careRows": {
+      "monitoring": "Surveillance de votre installation, jour et nuit",
+      "updates": "Mises à jour vérifiées, installées puis contrôlées",
+      "backup": "Sauvegarde chiffrée chaque jour",
+      "remote": "Dépannage à distance",
+      "changes": "Modifications (appareils, scénarios, tableau de bord)",
+      "delay": "Prise en charge sous",
+      "commitment": "Engagement"
+    },
+    "careValues": {
+      "hourly": "Facturées à l'heure",
+      "included": "1 h par mois incluse",
+      "days2": "2 jours ouvrés",
+      "days1": "1 jour ouvré",
+      "none": "Sans engagement"
+    },
+    "careNote": "Sans abonnement, votre installation continue de fonctionner : vous gardez tout, seul le suivi s'arrête.",
+    "footnote": "Tarifs indicatifs. Les travaux électriques (tableau, modules encastrés) sont réalisés par un électricien partenaire assuré, sur devis séparé.",
+    "ctaTitle": "Commencez par un diagnostic",
+    "ctaText": "Nous faisons le point ensemble et vous recevez un devis détaillé, matériel compris.",
+    "carePlans": {
+      "serenity": "Sérénité",
+      "serenityPlus": "Sérénité+"
+    }
   },
   "footer": {
-    "tagline": "Installation domotique sur mesure.",
+    "tagline": "Installation domotique privée et suivie.",
     "rights": "Tous droits réservés."
   }
 }

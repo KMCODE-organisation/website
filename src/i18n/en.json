@@ -1,31 +1,44 @@
 {
   "meta": {
-    "title": "KMCODE — Custom smart home installation",
-    "description": "KMCODE designs and installs your smart home: lighting, heating, shutters, security and energy monitoring, all controlled from a single app."
+    "title": "KMCODE — Private, supported smart home installation",
+    "description": "KMCODE installs your smart home: lighting, heating, smart cameras, voice assistant. Your data stays at home, no mandatory subscription.",
+    "offersTitle": "Plans and pricing — KMCODE",
+    "offersDescription": "Smart home installation packages from €490 to €1,190, hardware at retail price, Serenity support from €19/month with no commitment."
+  },
+  "common": {
+    "approx": "≈",
+    "from": "from",
+    "perMonth": "/month",
+    "perCamera": "per camera",
+    "each": "each",
+    "plus": "+",
+    "included": "Included",
+    "colon": ":"
   },
   "nav": {
     "home": "Home",
     "solutions": "Solutions",
+    "offers": "Plans",
     "method": "Process",
     "faq": "FAQ",
-    "cta": "Free quote",
+    "cta": "Contact us",
     "switchLang": "Passer en français",
     "toggleTheme": "Toggle theme"
   },
   "hero": {
     "eyebrow": "Smart home installation",
-    "titleStart": "A home that",
-    "titleHighlight": "takes care of you.",
-    "subtitle": "Lighting, heating, shutters, security: KMCODE designs and installs your smart home, controlled from a single app. Simple, reliable, no major works.",
-    "ctaPrimary": "Get a free quote",
-    "ctaSecondary": "See solutions",
-    "reassurance": "Free, no commitment"
+    "titleStart": "A smart home",
+    "titleHighlight": "that stays yours.",
+    "subtitle": "Lighting, heating, cameras, voice assistant: KMCODE installs, configures and looks after your smart home. Your data stays at home, and nothing forces you to subscribe.",
+    "ctaPrimary": "See our plans",
+    "ctaSecondary": "Write to us",
+    "reassurance": "€79 assessment, deducted if you order"
   },
   "trust": {
-    "quote": "Free, detailed quote",
-    "works": "Little to no renovation",
-    "compat": "Works with what you have",
-    "local": "Runs even without internet"
+    "local": "Your data stays at home",
+    "noSub": "No mandatory subscription",
+    "offline": "Works even without internet",
+    "owner": "You own the hardware"
   },
   "problem": {
     "eyebrow": "Why home automation",
@@ -33,110 +46,299 @@
     "items": {
       "comfort": {
         "title": "Comfort",
-        "text": "Lights, shutters and moods adapt to your habits. One scene, and the whole house follows."
+        "text": "Lights, heating and moods follow your habits. One word or one tap, and the whole house adapts."
       },
       "savings": {
         "title": "Savings",
-        "text": "Heating that follows your presence and clear energy tracking: finally see where your energy goes."
+        "text": "Heating adjusts to your presence, and you finally see, every day, where your energy goes."
       },
       "security": {
-        "title": "Security",
-        "text": "Alerts, presence simulation and access control: know what's happening at home, wherever you are."
+        "title": "Peace of mind",
+        "text": "Someone at the door? You get a notification with a photo, wherever you are."
       }
     }
   },
   "solutions": {
-    "eyebrow": "Solutions",
+    "eyebrow": "What we install",
     "title": "Everything your home can do for you",
-    "subtitle": "Every installation is designed around your home. Start with one room or equip the whole house.",
+    "subtitle": "Start with the essentials, then add more whenever you like. Everything is controlled from one place.",
     "items": {
       "lighting": {
-        "title": "Smart lighting",
-        "text": "Dimming, scenes, presence detection and automatic lighting at sunset."
+        "title": "Lighting and moods",
+        "text": "Lights that turn on when you arrive, \"evening\" or \"leaving\" scenes, everything off in one tap."
       },
       "climate": {
-        "title": "Heating and cooling",
-        "text": "Smart thermostats and room-by-room scheduling for steady comfort."
+        "title": "Heating and energy",
+        "text": "Room-by-room heating, open-window alerts, daily energy tracking."
       },
-      "shutters": {
-        "title": "Shutters and gate",
-        "text": "Opening based on time, weather or sunlight, with central control."
+      "cameras": {
+        "title": "Smart cameras",
+        "text": "They recognise a person, alert you with an image and record at home, not in a cloud."
       },
-      "security": {
-        "title": "Security and alarm",
-        "text": "Sensors, cameras, smart locks and real-time notifications."
+      "voice": {
+        "title": "Voice assistant",
+        "text": "\"Turn everything off except the living room\", \"is it cold in the bedroom?\": your home answers."
       },
-      "energy": {
-        "title": "Energy monitoring",
-        "text": "Live consumption, energy-hungry devices spotted, off-peak scheduling."
+      "tablet": {
+        "title": "Wall tablet",
+        "text": "A wall-mounted screen to see and control the whole house at a glance, for the whole family."
       },
-      "control": {
-        "title": "Central control",
-        "text": "An app, your voice or wall switches: everyone controls the house their own way."
+      "remote": {
+        "title": "App and remote access",
+        "text": "Your home in your pocket, securely, without opening anything on your internet router."
       }
+    }
+  },
+  "plans": {
+    "eyebrow": "Plans",
+    "title": "Clear packages, hardware included in the quote",
+    "subtitle": "A fixed installation fee, hardware at retail price, and optional support. You know exactly what you pay for.",
+    "labor": "Installation",
+    "hardware": "Recommended hardware",
+    "popular": "Most complete",
+    "seeAll": "See plan details",
+    "choose": "Ask for this plan",
+    "essential": {
+      "name": "Essential",
+      "tagline": "To get started simply.",
+      "features": [
+        "Home automation hub installed and configured",
+        "Up to 8 connected devices",
+        "A custom dashboard and the mobile app",
+        "1 hour of hands-on training with you"
+      ],
+      "hardwareText": "Home hub and wireless connection key"
+    },
+    "comfort": {
+      "name": "Comfort",
+      "tagline": "The whole house, controlled by touch or by voice.",
+      "features": [
+        "A more powerful hub, camera-ready",
+        "Up to 20 devices and 10 automations",
+        "A wall-mounted control tablet",
+        "A voice assistant"
+      ],
+      "hardwareText": "Powerful hub, wireless key, wall tablet, voice assistant"
+    },
+    "vigilance": {
+      "name": "Vigilance",
+      "tagline": "Cameras that understand what they see.",
+      "features": [
+        "Detects people and certain sounds (baby crying)",
+        "Notification with a photo on your phone",
+        "Pan-tilt cameras you control remotely",
+        "Recordings kept at home"
+      ],
+      "hardwareText": "Cameras of your choice, on the powerful hub (included in Comfort)"
     }
   },
   "method": {
     "eyebrow": "Process",
-    "title": "From idea to smart home, in four steps",
+    "title": "From first chat to smart home",
     "steps": {
       "audit": {
-        "title": "Discussion and audit",
-        "text": "We review your needs, your home and your current equipment."
+        "title": "Assessment",
+        "text": "On site or by video call, we review your needs and devices. €79, deducted if you order."
       },
       "proposal": {
-        "title": "Tailored proposal",
-        "text": "You get a clear, detailed quote with no surprises, fitted to your budget."
+        "title": "Detailed quote",
+        "text": "The right package and the hardware list, at retail price. You can also buy it yourself."
       },
       "install": {
-        "title": "Installation and setup",
-        "text": "Clean installation, full configuration and your everyday scenes created."
+        "title": "Installation and training",
+        "text": "We install, set up your everyday scenes and show you how to use everything."
       },
       "handover": {
-        "title": "Handover and follow-up",
-        "text": "We show you how to use it and stay available to grow the installation."
+        "title": "Support, if you want it",
+        "text": "With the Serenity subscription, we look after your installation. Without it, everything keeps working."
       }
     }
   },
-  "tech": {
+  "privacy": {
+    "eyebrow": "Your data",
+    "title": "Your home is yours, and so is your data",
+    "text": "Everything runs at home, on your hub. Our commitments are written into the contract.",
+    "items": {
+      "home": {
+        "title": "Everything stays at home",
+        "text": "History, settings and videos stay on your hub. Nothing goes to a cloud without your consent."
+      },
+      "cameras": {
+        "title": "Your images are yours",
+        "text": "We commit to never viewing your cameras. Every maintenance connection we make is logged."
+      },
+      "owner": {
+        "title": "You are the owner",
+        "text": "Of the hardware, accounts, passwords and data. You can cut our access at any time."
+      },
+      "leave": {
+        "title": "Free to leave",
+        "text": "When the contract ends, we hand everything over and delete our copies within 30 days."
+      }
+    }
+  },
+  "brands": {
     "eyebrow": "Compatibility",
-    "title": "Open standards, no vendor lock-in",
-    "text": "We work with the market's protocols and ecosystems so your installation stays future-proof."
+    "title": "Works with the devices you already have",
+    "text": "Appliances, speakers, robot vacuum, heating, lighting: we connect your brands together, without locking you into any of them."
   },
   "faq": {
     "eyebrow": "FAQ",
     "title": "Your questions",
     "items": {
+      "subscription": {
+        "q": "Is the subscription mandatory?",
+        "a": "No. Your installation works without a subscription and you keep everything. Serenity adds monitoring, updates and remote troubleshooting, with no commitment."
+      },
+      "hardware": {
+        "q": "Who buys the hardware?",
+        "a": "Your choice: we supply it at retail price, or you buy it yourself from the list we give you. Either way, it belongs to you."
+      },
       "works": {
         "q": "Is any renovation needed?",
-        "a": "Usually not. Many devices are wireless and replace existing switches or sockets. We always favour the least invasive option."
-      },
-      "existing": {
-        "q": "Is my current equipment compatible?",
-        "a": "Often, yes: boiler, motorised shutters, router or voice assistant can usually be integrated. The audit confirms it precisely."
+        "a": "Usually not: most devices are wireless. If your project involves the fuse box or in-wall modules, a partner insured electrician handles it, quoted separately."
       },
       "internet": {
         "q": "What happens if the internet goes down?",
-        "a": "We favour local control: automations keep running at home, only remote access pauses during the outage."
+        "a": "Your home keeps working normally, because everything runs locally. Only remote access pauses during the outage."
       },
-      "price": {
-        "q": "How much does an installation cost?",
-        "a": "It depends on the size of your home and the features you want. The quote is free and itemised, and you can start small and expand later."
+      "alarm": {
+        "q": "Do the cameras replace an alarm?",
+        "a": "No. They detect and alert you, but they don't replace a certified alarm recognised by insurers. We don't sell alarms or monitoring services."
       },
-      "privacy": {
-        "q": "Does my data stay private?",
-        "a": "Yes. With local control, your data stays at home. We clearly explain what does, or doesn't, go through online services."
+      "ai": {
+        "q": "What about artificial intelligence?",
+        "a": "It's optional and off by default. If you turn it on (a smarter voice assistant, camera alerts described in one sentence), it runs on your own account, for a few euros a month paid directly to the provider."
       }
     }
   },
   "cta": {
-    "title": "Ready to make your home smarter?",
-    "text": "Tell us about your project: we'll get back to you with a first proposal.",
+    "title": "Let's talk about your home",
+    "text": "Tell us about your project: we'll offer an assessment and a clear quote.",
     "button": "Write to us",
-    "reassurance": "Free quote, no commitment"
+    "reassurance": "Assessment deducted if you order"
+  },
+  "offers": {
+    "eyebrow": "Plans and pricing",
+    "title": "Clear prices, no surprises",
+    "subtitle": "You pay a fixed installation fee, hardware at retail price and, only if you want it, a monthly support plan with no commitment.",
+    "how": {
+      "labor": {
+        "title": "A fixed installation fee",
+        "text": "Installation, setup, dashboard and training. A fixed price, known in advance."
+      },
+      "hardware": {
+        "title": "Hardware at retail price",
+        "text": "We supply it at retail price, or you buy it yourself from our list. It belongs to you."
+      },
+      "care": {
+        "title": "Optional support",
+        "text": "The Serenity subscription looks after your installation. No commitment, cancel any month."
+      }
+    },
+    "diagnostic": {
+      "title": "It all starts with an assessment",
+      "text": "On site or by video call, we list your devices and wishes, then hand you a detailed quote.",
+      "note": "deducted if you order"
+    },
+    "total": "Estimated total budget",
+    "hardwareTitle": "Hardware, explained simply",
+    "hardwareSubtitle": "Well-known hardware, chosen for reliability. Prices observed in November 2026, reviewed with each quote.",
+    "hardwareItems": {
+      "boxSimple": {
+        "name": "Home hub",
+        "text": "The brain of the house, for the Essential plan. Compact and silent."
+      },
+      "boxPro": {
+        "name": "Powerful hub",
+        "text": "More powerful: required for smart cameras and the voice assistant."
+      },
+      "radio": {
+        "name": "Wireless connection key",
+        "text": "Lets the hub talk to connected sensors, bulbs and plugs."
+      },
+      "voice": {
+        "name": "Voice assistant",
+        "text": "A small speaker that listens for its wake word, without recording your conversations."
+      },
+      "tablet": {
+        "name": "Wall tablet",
+        "text": "Wall-mounted, screen off at night, built to stay plugged in permanently."
+      },
+      "cameraIndoor": {
+        "name": "Indoor camera",
+        "text": "Discreet, Wi-Fi, to keep an eye on a room."
+      },
+      "cameraPtz": {
+        "name": "Pan-tilt camera",
+        "text": "It rotates to cover a whole room, controlled from your phone."
+      },
+      "cameraOutdoor": {
+        "name": "Outdoor camera",
+        "text": "High definition, weatherproof, powered through its cable."
+      },
+      "doorbell": {
+        "name": "Video doorbell",
+        "text": "See who's ringing, with a photo on your phone."
+      }
+    },
+    "optionsEyebrow": "À la carte",
+    "optionsTitle": "Add-ons",
+    "optionsSubtitle": "Add to any plan.",
+    "optionItems": {
+      "aiVoice": {
+        "name": "Smart voice assistant",
+        "text": "Talk to your home naturally, with custom commands.",
+        "extra": "+ voice assistant"
+      },
+      "aiCameras": {
+        "name": "Described camera alerts",
+        "text": "\"A courier is leaving a parcel at the door\" instead of \"motion detected\"."
+      },
+      "extraDevice": {
+        "name": "Extra device",
+        "text": "Beyond the number included in your plan."
+      },
+      "extraAutomation": {
+        "name": "Extra automation",
+        "text": "A new custom scene."
+      },
+      "hour": {
+        "name": "Hour of work",
+        "text": "For any request outside your plan."
+      }
+    },
+    "aiNote": "AI add-ons are turned on by you and run on your own account: a few euros a month, paid directly to the provider.",
+    "careEyebrow": "Support",
+    "careTitle": "Serenity subscriptions",
+    "careSubtitle": "We look after your installation so it stays reliable, up to date and backed up.",
+    "careRows": {
+      "monitoring": "Monitoring of your installation, day and night",
+      "updates": "Updates checked, installed, then verified",
+      "backup": "Encrypted daily backup",
+      "remote": "Remote troubleshooting",
+      "changes": "Changes (devices, scenes, dashboard)",
+      "delay": "Response within",
+      "commitment": "Commitment"
+    },
+    "careValues": {
+      "hourly": "Billed hourly",
+      "included": "1 h per month included",
+      "days2": "2 business days",
+      "days1": "1 business day",
+      "none": "No commitment"
+    },
+    "careNote": "Without a subscription, your installation keeps working: you keep everything, only the support stops.",
+    "footnote": "Indicative prices. Electrical work (fuse box, in-wall modules) is done by a partner insured electrician, quoted separately.",
+    "ctaTitle": "Start with an assessment",
+    "ctaText": "We review everything together and you receive a detailed quote, hardware included.",
+    "carePlans": {
+      "serenity": "Serenity",
+      "serenityPlus": "Serenity+"
+    }
   },
   "footer": {
-    "tagline": "Custom smart home installation.",
+    "tagline": "Private, supported smart home installation.",
     "rights": "All rights reserved."
   }
 }
