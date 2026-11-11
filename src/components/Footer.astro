@@ -1,4 +1,5 @@
 ---
+import Logo from './Logo.astro';
 import { contactEmail } from '../config.js';
 import { defaultLocale, useTranslations } from '../i18n/index.js';
 
@@ -8,9 +9,9 @@ const year = new Date().getFullYear();
 
 <footer class="border-t border-base-300/60">
   <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-10 text-sm text-base-content/60 sm:flex-row sm:px-6">
-    <div class="text-center sm:text-left">
-      <p class="font-bold tracking-wide text-base-content">KM<span class="text-primary">CODE</span></p>
-      <p class="mt-1">{t('footer.tagline')}</p>
+    <div class="flex flex-col items-center sm:items-start">
+      <Logo height={26} />
+      <p class="mt-2">{t('footer.tagline')}</p>
     </div>
     <a href={`mailto:${contactEmail}`} class="link link-hover">{contactEmail}</a>
     <p>© {year} KMCODE — {t('footer.rights')}</p>

@@ -27,7 +27,10 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
       ))
     }
     <link rel="alternate" hreflang="x-default" href={new URL(localizedPath(Astro.url.pathname, defaultLocale), Astro.site)} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <meta name="theme-color" content="#0a0a0c" />
 
     <meta property="og:type" content="website" />
@@ -36,6 +39,11 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:description" content={pageDescription} />
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content={locale === 'fr' ? 'fr_FR' : 'en_US'} />
+    <meta property="og:image" content={new URL('/og-image.jpg', Astro.site)} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="KMCODE" />
+    <meta name="twitter:card" content="summary_large_image" />
 
     <!-- Applique le thème mémorisé avant le premier rendu (évite le flash). -->
     <script is:inline>

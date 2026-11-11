@@ -12,3 +12,4 @@ Contexte général (droits, workflow PR, Vercel) : `../CLAUDE.md`.
 - Direction visuelle : fond noir, halos violet/menthe, motif hexagonal « réseau » (`HeroVisual.astro`), typo arrondie, labels `eyebrow`, boutons ronds. Animations en CSS, désactivées si `prefers-reduced-motion`. Apparition au scroll : attribut `data-reveal`.
 - Email de contact centralisé dans `src/config.js`.
 - Icônes : `Icon.astro` (tracés Lucide inline, pas de dépendance). Ajouter un tracé au dictionnaire plutôt qu'importer une lib.
+- Logos : exports bruts (PNG, variantes `dark/` et `light/`) dans `../helpers/brand/` (non versionné). Dans le site : `src/assets/brand/logo-{dark,light}.png` (rognés, 1000 px, optimisés en WebP par `astro:assets`), affichés via `Logo.astro` selon le thème. Favicon, icônes PWA et `og-image.jpg` (1200×630) dans `public/`, générés depuis les exports avec `sharp`.
