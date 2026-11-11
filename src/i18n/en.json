@@ -1,27 +1,142 @@
 {
   "meta": {
-    "title": "KMCODE — Web and mobile development",
-    "description": "KMCODE designs and builds custom websites, web and mobile apps, from front-end to back-end."
+    "title": "KMCODE — Custom smart home installation",
+    "description": "KMCODE designs and installs your smart home: lighting, heating, shutters, security and energy monitoring, all controlled from a single app."
   },
   "nav": {
     "home": "Home",
+    "solutions": "Solutions",
+    "method": "Process",
+    "faq": "FAQ",
+    "cta": "Free quote",
     "switchLang": "Passer en français",
     "toggleTheme": "Toggle theme"
   },
-  "home": {
-    "eyebrow": "Development studio",
-    "title": "Polished digital products, from first commit to launch.",
-    "subtitle": "Websites, web and mobile apps: KMCODE supports you from design to deployment.",
-    "cta": "Explore our services",
-    "services": {
-      "eyebrow": "Services",
-      "title": "What we do",
-      "web": { "title": "Web", "text": "Fast, accessible, search-friendly sites and apps." },
-      "mobile": { "title": "Mobile", "text": "iOS and Android apps with a native feel." },
-      "backend": { "title": "Back-end", "text": "Robust APIs, databases and integrations." }
+  "hero": {
+    "eyebrow": "Smart home installation",
+    "titleStart": "A home that",
+    "titleHighlight": "takes care of you.",
+    "subtitle": "Lighting, heating, shutters, security: KMCODE designs and installs your smart home, controlled from a single app. Simple, reliable, no major works.",
+    "ctaPrimary": "Get a free quote",
+    "ctaSecondary": "See solutions",
+    "reassurance": "Free, no commitment"
+  },
+  "trust": {
+    "quote": "Free, detailed quote",
+    "works": "Little to no renovation",
+    "compat": "Works with what you have",
+    "local": "Runs even without internet"
+  },
+  "problem": {
+    "eyebrow": "Why home automation",
+    "title": "Fewer chores, lower bills, more peace of mind.",
+    "items": {
+      "comfort": {
+        "title": "Comfort",
+        "text": "Lights, shutters and moods adapt to your habits. One scene, and the whole house follows."
+      },
+      "savings": {
+        "title": "Savings",
+        "text": "Heating that follows your presence and clear energy tracking: finally see where your energy goes."
+      },
+      "security": {
+        "title": "Security",
+        "text": "Alerts, presence simulation and access control: know what's happening at home, wherever you are."
+      }
     }
   },
+  "solutions": {
+    "eyebrow": "Solutions",
+    "title": "Everything your home can do for you",
+    "subtitle": "Every installation is designed around your home. Start with one room or equip the whole house.",
+    "items": {
+      "lighting": {
+        "title": "Smart lighting",
+        "text": "Dimming, scenes, presence detection and automatic lighting at sunset."
+      },
+      "climate": {
+        "title": "Heating and cooling",
+        "text": "Smart thermostats and room-by-room scheduling for steady comfort."
+      },
+      "shutters": {
+        "title": "Shutters and gate",
+        "text": "Opening based on time, weather or sunlight, with central control."
+      },
+      "security": {
+        "title": "Security and alarm",
+        "text": "Sensors, cameras, smart locks and real-time notifications."
+      },
+      "energy": {
+        "title": "Energy monitoring",
+        "text": "Live consumption, energy-hungry devices spotted, off-peak scheduling."
+      },
+      "control": {
+        "title": "Central control",
+        "text": "An app, your voice or wall switches: everyone controls the house their own way."
+      }
+    }
+  },
+  "method": {
+    "eyebrow": "Process",
+    "title": "From idea to smart home, in four steps",
+    "steps": {
+      "audit": {
+        "title": "Discussion and audit",
+        "text": "We review your needs, your home and your current equipment."
+      },
+      "proposal": {
+        "title": "Tailored proposal",
+        "text": "You get a clear, detailed quote with no surprises, fitted to your budget."
+      },
+      "install": {
+        "title": "Installation and setup",
+        "text": "Clean installation, full configuration and your everyday scenes created."
+      },
+      "handover": {
+        "title": "Handover and follow-up",
+        "text": "We show you how to use it and stay available to grow the installation."
+      }
+    }
+  },
+  "tech": {
+    "eyebrow": "Compatibility",
+    "title": "Open standards, no vendor lock-in",
+    "text": "We work with the market's protocols and ecosystems so your installation stays future-proof."
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Your questions",
+    "items": {
+      "works": {
+        "q": "Is any renovation needed?",
+        "a": "Usually not. Many devices are wireless and replace existing switches or sockets. We always favour the least invasive option."
+      },
+      "existing": {
+        "q": "Is my current equipment compatible?",
+        "a": "Often, yes: boiler, motorised shutters, router or voice assistant can usually be integrated. The audit confirms it precisely."
+      },
+      "internet": {
+        "q": "What happens if the internet goes down?",
+        "a": "We favour local control: automations keep running at home, only remote access pauses during the outage."
+      },
+      "price": {
+        "q": "How much does an installation cost?",
+        "a": "It depends on the size of your home and the features you want. The quote is free and itemised, and you can start small and expand later."
+      },
+      "privacy": {
+        "q": "Does my data stay private?",
+        "a": "Yes. With local control, your data stays at home. We clearly explain what does, or doesn't, go through online services."
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready to make your home smarter?",
+    "text": "Tell us about your project: we'll get back to you with a first proposal.",
+    "button": "Write to us",
+    "reassurance": "Free quote, no commitment"
+  },
   "footer": {
+    "tagline": "Custom smart home installation.",
     "rights": "All rights reserved."
   }
 }

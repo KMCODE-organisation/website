@@ -10,7 +10,7 @@ Site public de KMCODE : [www.kmcode.fr](https://www.kmcode.fr).
 | Styles | [Tailwind CSS v4](https://tailwindcss.com) |
 | Composants UI | [daisyUI 5](https://daisyui.com) (100 % CSS, pas de JS) |
 | Traduction | i18n natif d'Astro : `fr` à la racine, `en` sous `/en/` |
-| Thème | Thèmes daisyUI `kmcode` (sombre, défaut) et `kmcode-light` |
+| Thème | Thèmes daisyUI `kmcode` (sombre, défaut) et `kmcode-light` — charte : noir, blanc, violet `#6c5ce7`, menthe `#5ed3b0` |
 | Police | Quicksand Variable (auto-hébergée via Fontsource) |
 | Hébergement | Vercel (preview par PR, prod au merge sur `main`) |
 

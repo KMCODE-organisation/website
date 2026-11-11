@@ -28,7 +28,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     }
     <link rel="alternate" hreflang="x-default" href={new URL(localizedPath(Astro.url.pathname, defaultLocale), Astro.site)} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="theme-color" content="#121318" />
+    <meta name="theme-color" content="#0a0a0c" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="KMCODE" />
@@ -39,6 +39,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
 
     <!-- Applique le thème mémorisé avant le premier rendu (évite le flash). -->
     <script is:inline>
+      document.documentElement.classList.add('js');
       try {
         const theme = localStorage.getItem('theme');
         if (theme) document.documentElement.dataset.theme = theme;
@@ -51,5 +52,20 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
       <slot />
     </main>
     <Footer />
+
+    <script>
+      // Apparition au scroll des éléments [data-reveal].
+      const observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (!entry.isIntersecting) continue;
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        },
+        { rootMargin: '0px 0px -10% 0px' },
+      );
+      document.querySelectorAll('[data-reveal]').forEach((el) => observer.observe(el));
+    </script>
   </body>
 </html>

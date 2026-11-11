@@ -7,39 +7,41 @@
   logs: false;
 }
 
-/* Thème sombre — identité KMCODE (maquette : fond quasi noir, texte blanc). */
+/* Charte KMCODE : noir, blanc, violet #6c5ce7 (primary), menthe #5ed3b0 (accent). */
+
+/* Thème sombre (défaut). */
 @plugin 'daisyui/theme' {
   name: 'kmcode';
   default: true;
   prefersdark: true;
   color-scheme: dark;
 
-  --color-base-100: oklch(17% 0.008 270);
-  --color-base-200: oklch(21% 0.008 270);
-  --color-base-300: oklch(27% 0.008 270);
-  --color-base-content: oklch(96% 0.003 270);
+  --color-base-100: #0a0a0c;
+  --color-base-200: #121216;
+  --color-base-300: #1e1e25;
+  --color-base-content: #ffffff;
 
-  --color-primary: oklch(96% 0.003 270);
-  --color-primary-content: oklch(17% 0.008 270);
-  --color-secondary: oklch(70% 0.01 270);
-  --color-secondary-content: oklch(17% 0.008 270);
-  --color-accent: oklch(68% 0.16 265);
-  --color-accent-content: oklch(98% 0.005 265);
-  --color-neutral: oklch(27% 0.008 270);
-  --color-neutral-content: oklch(96% 0.003 270);
+  --color-primary: #6c5ce7;
+  --color-primary-content: #ffffff;
+  --color-secondary: #ffffff;
+  --color-secondary-content: #0a0a0c;
+  --color-accent: #5ed3b0;
+  --color-accent-content: #0a0a0c;
+  --color-neutral: #1e1e25;
+  --color-neutral-content: #ffffff;
 
-  --color-info: oklch(70% 0.13 235);
-  --color-info-content: oklch(17% 0.008 270);
-  --color-success: oklch(72% 0.15 155);
-  --color-success-content: oklch(17% 0.008 270);
-  --color-warning: oklch(80% 0.15 80);
-  --color-warning-content: oklch(17% 0.008 270);
-  --color-error: oklch(65% 0.2 25);
-  --color-error-content: oklch(98% 0.005 25);
+  --color-info: #6c5ce7;
+  --color-info-content: #ffffff;
+  --color-success: #5ed3b0;
+  --color-success-content: #0a0a0c;
+  --color-warning: #f5c26b;
+  --color-warning-content: #0a0a0c;
+  --color-error: #ef6b6b;
+  --color-error-content: #0a0a0c;
 
   --radius-selector: 2rem;
   --radius-field: 2rem;
-  --radius-box: 1rem;
+  --radius-box: 1.25rem;
   --size-selector: 0.25rem;
   --size-field: 0.25rem;
   --border: 1px;
@@ -47,42 +49,53 @@
   --noise: 0;
 }
 
-/* Thème clair — même structure, valeurs inversées. */
+/* Thème clair. */
 @plugin 'daisyui/theme' {
   name: 'kmcode-light';
   color-scheme: light;
 
-  --color-base-100: oklch(99% 0.002 270);
-  --color-base-200: oklch(96% 0.004 270);
-  --color-base-300: oklch(91% 0.006 270);
-  --color-base-content: oklch(20% 0.008 270);
+  --color-base-100: #ffffff;
+  --color-base-200: #f5f5f8;
+  --color-base-300: #e6e6ee;
+  --color-base-content: #0a0a0c;
 
-  --color-primary: oklch(20% 0.008 270);
-  --color-primary-content: oklch(98% 0.003 270);
-  --color-secondary: oklch(45% 0.01 270);
-  --color-secondary-content: oklch(98% 0.003 270);
-  --color-accent: oklch(52% 0.2 265);
-  --color-accent-content: oklch(98% 0.005 265);
-  --color-neutral: oklch(25% 0.008 270);
-  --color-neutral-content: oklch(98% 0.003 270);
+  --color-primary: #6c5ce7;
+  --color-primary-content: #ffffff;
+  --color-secondary: #0a0a0c;
+  --color-secondary-content: #ffffff;
+  --color-accent: #5ed3b0;
+  --color-accent-content: #0a0a0c;
+  --color-neutral: #0a0a0c;
+  --color-neutral-content: #ffffff;
 
-  --color-info: oklch(55% 0.15 235);
-  --color-info-content: oklch(98% 0.005 235);
-  --color-success: oklch(55% 0.15 155);
-  --color-success-content: oklch(98% 0.005 155);
-  --color-warning: oklch(70% 0.16 70);
-  --color-warning-content: oklch(20% 0.008 270);
-  --color-error: oklch(55% 0.22 25);
-  --color-error-content: oklch(98% 0.005 25);
+  --color-info: #6c5ce7;
+  --color-info-content: #ffffff;
+  --color-success: #5ed3b0;
+  --color-success-content: #0a0a0c;
+  --color-warning: #f5c26b;
+  --color-warning-content: #0a0a0c;
+  --color-error: #d64545;
+  --color-error-content: #ffffff;
 
   --radius-selector: 2rem;
   --radius-field: 2rem;
-  --radius-box: 1rem;
+  --radius-box: 1.25rem;
   --size-selector: 0.25rem;
   --size-field: 0.25rem;
   --border: 1px;
   --depth: 0;
   --noise: 0;
+}
+
+/*
+ * Dégradé de mise en avant (texte). La menthe pure est illisible sur blanc :
+ * en clair, on fonce le vert pour garder le contraste.
+ */
+:root {
+  --brand-gradient: linear-gradient(90deg, #8f82ff, #5ed3b0);
+}
+[data-theme='kmcode-light'] {
+  --brand-gradient: linear-gradient(90deg, #6c5ce7, #138a68);
 }
 
 @theme {
@@ -96,7 +109,39 @@
   }
 }
 
-/* Label de section : capitales espacées, discret (cf. maquette « PROJETS », « POSTE »). */
+/* Label de section : capitales espacées, discret, précédé d'un trait menthe. */
 @utility eyebrow {
-  @apply text-xs font-semibold tracking-[0.2em] uppercase text-base-content/60;
+  @apply inline-flex items-center gap-3 text-xs font-semibold tracking-[0.2em] uppercase text-base-content/60;
+
+  &::before {
+    content: '';
+    @apply h-px w-8 bg-accent;
+  }
+}
+
+@utility text-gradient {
+  background-image: var(--brand-gradient);
+  background-clip: text;
+  color: transparent;
+}
+
+/* Apparition au scroll : uniquement si JS actif (classe .js posée dans le <head>). */
+@layer base {
+  .js [data-reveal] {
+    opacity: 0;
+    transform: translateY(1.5rem);
+    transition:
+      opacity 0.7s ease,
+      transform 0.7s ease;
+  }
+  .js [data-reveal].is-visible {
+    opacity: 1;
+    transform: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .js [data-reveal] {
+      transform: none;
+      transition: opacity 0.3s ease;
+    }
+  }
 }
