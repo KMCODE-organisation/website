@@ -1,0 +1,19 @@
+---
+import { defaultLocale, locales, localizedPath, useTranslations } from '../i18n/index.js';
+
+const locale = Astro.currentLocale ?? defaultLocale;
+const t = useTranslations(locale);
+// Deux langues : le bouton propose l'autre.
+const target = locales.find((l) => l !== locale);
+---
+
+<a
+  href={localizedPath(Astro.url.pathname, target)}
+  hreflang={target}
+  lang={target}
+  class="btn btn-circle btn-outline btn-sm border-base-content/30 text-xs font-bold uppercase"
+  aria-label={t('nav.switchLang')}
+  title={t('nav.switchLang')}
+>
+  {target}
+</a>
