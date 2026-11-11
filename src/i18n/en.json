@@ -345,6 +345,26 @@
     "carePlans": {
       "serenity": "Serenity",
       "serenityPlus": "Serenity+"
+    },
+    "custom": {
+      "eyebrow": "On quote",
+      "title": "Going further",
+      "subtitle": "More advanced needs? We look at them with you and quote them separately.",
+      "items": {
+        "network": {
+          "name": "Dedicated Wi-Fi network",
+          "text": "Your own router and Wi-Fi: everything keeps working exactly the same if you change provider or move, and cameras can be cut off from the internet."
+        },
+        "storage": {
+          "name": "Storage at home",
+          "text": "A storage server at your place to keep footage longer and access photos and documents, with no outside cloud."
+        },
+        "mobileCam": {
+          "name": "Cameras without internet",
+          "text": "For a second home, a garden shed or a plot of land: cameras on the mobile network, running on battery or solar panel."
+        }
+      },
+      "note": "Mobile-network cameras send their images through their manufacturer's service: we tell you clearly before any installation."
     }
   },
   "footer": {
@@ -479,6 +499,12 @@
                 "Keeping a copy outside your home",
                 "An encrypted backup, unreadable without the key",
                 "With the Serenity plan"
+              ],
+              [
+                "Manufacturer of mobile-network cameras (option on quote)",
+                "Viewing cameras installed where there is no internet",
+                "The images from those cameras, over the mobile network",
+                "Only if you choose these cameras"
               ]
             ]
           }

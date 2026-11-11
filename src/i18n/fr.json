@@ -345,6 +345,26 @@
     "carePlans": {
       "serenity": "Sérénité",
       "serenityPlus": "Sérénité+"
+    },
+    "custom": {
+      "eyebrow": "Sur devis",
+      "title": "Pour aller plus loin",
+      "subtitle": "Des besoins plus avancés ? Nous les étudions avec vous et les chiffrons sur devis.",
+      "items": {
+        "network": {
+          "name": "Réseau Wi-Fi dédié",
+          "text": "Votre propre routeur et votre Wi-Fi : tout continue de fonctionner à l'identique si vous changez d'opérateur ou déménagez, et les caméras peuvent être coupées d'internet."
+        },
+        "storage": {
+          "name": "Stockage à la maison",
+          "text": "Un serveur de stockage chez vous pour garder vos vidéos plus longtemps et retrouver photos et documents, sans cloud extérieur."
+        },
+        "mobileCam": {
+          "name": "Caméras sans internet",
+          "text": "Pour une résidence secondaire, un abri de jardin ou un terrain : des caméras sur réseau mobile, autonomes sur batterie ou panneau solaire."
+        }
+      },
+      "note": "Les caméras sur réseau mobile transmettent leurs images par le service de leur fabricant : nous vous l'indiquons clairement avant toute installation."
     }
   },
   "footer": {
@@ -479,6 +499,12 @@
                 "Garder une copie hors de chez vous",
                 "Une sauvegarde chiffrée, illisible sans la clé",
                 "Avec l'abonnement Sérénité"
+              ],
+              [
+                "Fabricant des caméras sur réseau mobile (option sur devis)",
+                "Voir des caméras installées là où il n'y a pas d'internet",
+                "Les images de ces caméras, via le réseau mobile",
+                "Seulement si vous choisissez ces caméras"
               ]
             ]
           }
