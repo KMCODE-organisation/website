@@ -1,0 +1,89 @@
+---
+// Les trois forfaits d'installation, avec le matériel conseillé (accueil et page Offres).
+import Icon from './Icon.astro';
+import { plans, formatPrice } from '../data/pricing.js';
+import { contactEmail } from '../config.js';
+import { defaultLocale, useTranslations } from '../i18n/index.js';
+
+const locale = Astro.currentLocale ?? defaultLocale;
+const t = useTranslations(locale);
+const price = (v) => formatPrice(v, locale);
+const { showTotal = false } = Astro.props;
+
+const sum = (a, b) => (Array.isArray(b) ? b.map((x) => a + x) : a + b);
+
+const cards = [
+  {
+    key: 'essential',
+    price: price(plans.essential.labor),
+    hardware: `${t('common.approx')} ${price(plans.essential.hardware)}`,
+    total: price(sum(plans.essential.labor, plans.essential.hardware)),
+  },
+  {
+    key: 'comfort',
+    popular: true,
+    price: price(plans.comfort.labor),
+    hardware: `${t('common.approx')} ${price(plans.comfort.hardware)}`,
+    total: price(sum(plans.comfort.labor, plans.comfort.hardware)),
+  },
+  {
+    key: 'vigilance',
+    price: price(plans.vigilance.labor),
+    priceExtra: `${t('common.plus')} ${price(plans.vigilance.perCamera)} ${t('common.perCamera')}`,
+    hardware: `${price(plans.vigilance.camera)} ${t('common.each')}`,
+  },
+];
+---
+
+<div class="grid gap-6 lg:grid-cols-3">
+  {
+    cards.map((c) => (
+      <article
+        data-reveal
+        class:list={[
+          'relative flex flex-col rounded-box border bg-base-100 p-8',
+          c.popular ? 'border-primary shadow-[0_0_60px_-15px] shadow-primary/50' : 'border-base-300',
+        ]}
+      >
+        {c.popular && <span class="badge absolute -top-3 left-8 border-0 bg-accent font-semibold text-accent-content">{t('plans.popular')}</span>}
+        <h3 class="text-2xl font-bold">{t(`plans.${c.key}.name`)}</h3>
+        <p class="mt-2 text-base-content/70">{t(`plans.${c.key}.tagline`)}</p>
+
+        <p class="mt-6 eyebrow">{t('plans.labor')}</p>
+        <p class="mt-2 text-4xl font-bold">
+          {c.price}
+          {c.priceExtra && <span class="block text-base font-medium text-base-content/70">{c.priceExtra}</span>}
+        </p>
+
+        <ul class="mt-6 space-y-3">
+          {t(`plans.${c.key}.features`).map((f) => (
+            <li class="flex gap-3">
+              <Icon name="check" class="mt-0.5 size-5 shrink-0 text-accent" />
+              <span>{f}</span>
+            </li>
+          ))}
+        </ul>
+
+        <div class="mt-auto pt-8">
+          <div class="rounded-2xl bg-base-200 p-4 text-sm">
+            <p class="font-semibold">
+              {t('plans.hardware')}{t('common.colon')} <span class="whitespace-nowrap">{c.hardware}</span>
+            </p>
+            <p class="mt-1 text-base-content/70">{t(`plans.${c.key}.hardwareText`)}</p>
+            {showTotal && c.total && (
+              <p class="mt-3 border-t border-base-300 pt-3">
+                {t('offers.total')}{t('common.colon')} <span class="font-semibold whitespace-nowrap">{t('common.approx')} {c.total}</span>
+              </p>
+            )}
+          </div>
+          <a
+            href={`mailto:${contactEmail}?subject=${encodeURIComponent(`KMCODE — ${t(`plans.${c.key}.name`)}`)}`}
+            class:list={['btn mt-6 w-full', c.popular ? 'btn-primary' : 'btn-outline border-base-content/20']}
+          >
+            {t('plans.choose')}
+          </a>
+        </div>
+      </article>
+    ))
+  }
+</div>

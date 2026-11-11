@@ -1,0 +1,27 @@
+---
+// Bandeau d'appel à l'action de fin de page.
+import Icon from './Icon.astro';
+import { contactEmail } from '../config.js';
+import { defaultLocale, useTranslations } from '../i18n/index.js';
+
+const t = useTranslations(Astro.currentLocale ?? defaultLocale);
+const { title = t('cta.title'), text = t('cta.text') } = Astro.props;
+---
+
+<section id="contact" class="scroll-mt-16 px-4 pb-24 sm:px-6">
+  <div
+    data-reveal
+    class="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] bg-primary px-6 py-16 text-center text-primary-content sm:px-16"
+  >
+    <div class="pointer-events-none absolute -top-24 -right-24 size-80 rounded-full bg-accent/40 blur-[100px]" aria-hidden="true"></div>
+    <div class="relative">
+      <h2 class="mx-auto max-w-2xl text-3xl font-bold sm:text-4xl">{title}</h2>
+      <p class="mx-auto mt-4 max-w-xl text-primary-content/80">{text}</p>
+      <a href={`mailto:${contactEmail}`} class="btn btn-lg mt-10 border-0 bg-white px-8 text-black hover:bg-white/90">
+        <Icon name="mail" class="size-5" />
+        {t('cta.button')}
+      </a>
+      <p class="mt-4 text-sm text-primary-content/70">{t('cta.reassurance')}</p>
+    </div>
+  </div>
+</section>

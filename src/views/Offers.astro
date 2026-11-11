@@ -1,0 +1,192 @@
+---
+import Icon from '../components/Icon.astro';
+import PlanCards from '../components/PlanCards.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import { care, formatPrice, hardware, options, plans } from '../data/pricing.js';
+import { defaultLocale, useTranslations } from '../i18n/index.js';
+
+const locale = Astro.currentLocale ?? defaultLocale;
+const t = useTranslations(locale);
+const price = (v) => formatPrice(v, locale);
+
+const how = [
+  { key: 'labor', icon: 'wrench' },
+  { key: 'hardware', icon: 'server' },
+  { key: 'care', icon: 'refresh' },
+];
+
+const optionRows = [
+  { key: 'aiVoice', icon: 'sparkles', value: price(options.aiVoice) },
+  { key: 'aiCameras', icon: 'sparkles', value: price(options.aiCameras) },
+  { key: 'extraDevice', icon: 'lightbulb', value: price(options.extraDevice) },
+  { key: 'extraAutomation', icon: 'zap', value: price(options.extraAutomation) },
+  { key: 'hour', icon: 'wrench', value: price(options.hour) },
+];
+
+// Comparatif Sérénité / Sérénité+ : true = inclus, chaîne = valeur affichée.
+const careRows = [
+  { key: 'monitoring', values: [true, true] },
+  { key: 'updates', values: [true, true] },
+  { key: 'backup', values: [true, true] },
+  { key: 'remote', values: [true, true] },
+  { key: 'changes', values: [t('offers.careValues.hourly'), t('offers.careValues.included')] },
+  { key: 'delay', values: [t('offers.careValues.days2'), t('offers.careValues.days1')] },
+  { key: 'commitment', values: [t('offers.careValues.none'), t('offers.careValues.none')] },
+];
+const carePlans = [
+  { name: t('offers.carePlans.serenity'), price: care.serenity },
+  { name: t('offers.carePlans.serenityPlus'), price: care.serenityPlus, highlight: true },
+];
+---
+
+<!-- En-tête -->
+<section class="relative overflow-hidden">
+  <div class="pointer-events-none absolute -top-40 left-1/2 size-[36rem] -translate-x-1/2 rounded-full bg-primary/20 blur-[120px]" aria-hidden="true"></div>
+  <div class="relative mx-auto max-w-4xl px-4 pt-24 pb-16 text-center sm:px-6">
+    <p class="eyebrow">{t('offers.eyebrow')}</p>
+    <h1 class="mt-6 text-4xl leading-tight font-bold sm:text-6xl">{t('offers.title')}</h1>
+    <p class="mx-auto mt-6 max-w-2xl text-lg text-base-content/70">{t('offers.subtitle')}</p>
+  </div>
+
+  <!-- Comment ça marche -->
+  <div class="relative mx-auto grid max-w-6xl gap-6 px-4 pb-16 sm:px-6 md:grid-cols-3">
+    {
+      how.map(({ key, icon }, i) => (
+        <article data-reveal class="rounded-box border border-base-300 bg-base-100/60 p-6 backdrop-blur">
+          <div class="flex items-center gap-3">
+            <span class="grid size-10 place-items-center rounded-full bg-primary/15 text-primary">
+              <Icon name={icon} class="size-5" />
+            </span>
+            <span class="text-gradient text-2xl font-bold">{i + 1}</span>
+          </div>
+          <h2 class="mt-4 font-bold">{t(`offers.how.${key}.title`)}</h2>
+          <p class="mt-2 text-sm text-base-content/70">{t(`offers.how.${key}.text`)}</p>
+        </article>
+      ))
+    }
+  </div>
+</section>
+
+<!-- Diagnostic -->
+<section class="mx-auto max-w-6xl px-4 sm:px-6">
+  <div data-reveal class="flex flex-col gap-6 rounded-box border border-accent/40 bg-accent/5 p-8 md:flex-row md:items-center md:justify-between">
+    <div class="max-w-2xl">
+      <h2 class="text-2xl font-bold">{t('offers.diagnostic.title')}</h2>
+      <p class="mt-2 text-base-content/70">{t('offers.diagnostic.text')}</p>
+    </div>
+    <p class="shrink-0 text-center md:text-right">
+      <span class="block text-4xl font-bold">{price(plans.diagnostic)}</span>
+      <span class="text-sm text-base-content/70">{t('offers.diagnostic.note')}</span>
+    </p>
+  </div>
+</section>
+
+<!-- Forfaits -->
+<section class="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+  <SectionHeading eyebrow={t('plans.eyebrow')} title={t('plans.title')} />
+  <div class="mt-12">
+    <PlanCards showTotal />
+  </div>
+</section>
+
+<!-- Matériel -->
+<section id="hardware" class="scroll-mt-16 bg-base-200/50 py-24">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <SectionHeading eyebrow={t('plans.hardware')} title={t('offers.hardwareTitle')} subtitle={t('offers.hardwareSubtitle')} />
+    <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        hardware.map(({ key, icon, price: p, from }) => (
+          <article data-reveal class="flex gap-4 rounded-box border border-base-300 bg-base-100 p-6">
+            <span class="grid size-11 shrink-0 place-items-center rounded-2xl bg-primary/10 text-primary">
+              <Icon name={icon} class="size-5" />
+            </span>
+            <div>
+              <h3 class="font-bold">{t(`offers.hardwareItems.${key}.name`)}</h3>
+              <p class="mt-1 text-sm text-base-content/70">{t(`offers.hardwareItems.${key}.text`)}</p>
+              <p class="mt-3 text-sm font-semibold">
+                {from ? t('common.from') : t('common.approx')} {price(p)}
+              </p>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Options -->
+<section class="mx-auto max-w-4xl px-4 py-24 sm:px-6">
+  <SectionHeading eyebrow={t('offers.optionsEyebrow')} title={t('offers.optionsTitle')} subtitle={t('offers.optionsSubtitle')} />
+  <ul data-reveal class="mt-10 divide-y divide-base-300 rounded-box border border-base-300">
+    {
+      optionRows.map(({ key, icon, value }) => (
+        <li class="flex items-start gap-4 p-5 sm:items-center">
+          <Icon name={icon} class="mt-0.5 size-5 shrink-0 text-accent sm:mt-0" />
+          <div class="flex-1">
+            <p class="font-semibold">{t(`offers.optionItems.${key}.name`)}</p>
+            <p class="text-sm text-base-content/70">{t(`offers.optionItems.${key}.text`)}</p>
+          </div>
+          <p class="text-right font-bold whitespace-nowrap">
+            {value}
+            {key === 'aiVoice' && <span class="block text-xs font-normal text-base-content/60">{t('offers.optionItems.aiVoice.extra')}</span>}
+          </p>
+        </li>
+      ))
+    }
+  </ul>
+  <p class="mt-4 flex gap-2 text-sm text-base-content/60">
+    <Icon name="sparkles" class="mt-0.5 size-4 shrink-0" />
+    {t('offers.aiNote')}
+  </p>
+</section>
+
+<!-- Sérénité -->
+<section id="care" class="scroll-mt-16 bg-base-200/50 py-24">
+  <div class="mx-auto max-w-4xl px-4 sm:px-6">
+    <SectionHeading eyebrow={t('offers.careEyebrow')} title={t('offers.careTitle')} subtitle={t('offers.careSubtitle')} />
+    <div data-reveal class="mt-10 overflow-x-auto rounded-box border border-base-300 bg-base-100">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="w-1/2"></th>
+            {
+              carePlans.map((p) => (
+                <th class:list={['text-center text-base-content', p.highlight && 'bg-primary/10']}>
+                  <span class="block text-lg font-bold">{p.name}</span>
+                  <span class="text-2xl font-bold">{price(p.price)}</span>
+                  <span class="text-sm font-normal text-base-content/60">{t('common.perMonth')}</span>
+                </th>
+              ))
+            }
+          </tr>
+        </thead>
+        <tbody>
+          {
+            careRows.map(({ key, values }) => (
+              <tr>
+                <td>{t(`offers.careRows.${key}`)}</td>
+                {values.map((v, i) => (
+                  <td class:list={['text-center', carePlans[i].highlight && 'bg-primary/10']}>
+                    {v === true ? <>
+                        <Icon name="check" class="mx-auto size-5 text-accent" />
+                        <span class="sr-only">{t('common.included')}</span>
+                      </> : <span class="text-sm">{v}</span>}
+                  </td>
+                ))}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 flex gap-2 text-sm text-base-content/70">
+      <Icon name="check" class="mt-0.5 size-4 shrink-0 text-accent" />
+      {t('offers.careNote')}
+    </p>
+  </div>
+</section>
+
+<p class="mx-auto max-w-4xl px-4 py-12 text-center text-sm text-base-content/60 sm:px-6">{t('offers.footnote')}</p>
+
+<CtaBanner title={t('offers.ctaTitle')} text={t('offers.ctaText')} />

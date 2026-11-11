@@ -4,12 +4,18 @@ import LangSwitcher from './LangSwitcher.astro';
 import ThemeToggle from './ThemeToggle.astro';
 import Logo from './Logo.astro';
 import { contactEmail } from '../config.js';
-import { defaultLocale, useTranslations } from '../i18n/index.js';
+import { defaultLocale, pathFor, useTranslations } from '../i18n/index.js';
 
 const locale = Astro.currentLocale ?? defaultLocale;
 const t = useTranslations(locale);
 const home = getRelativeLocaleUrl(locale);
-const links = ['solutions', 'method', 'faq'];
+const links = [
+  { key: 'solutions', href: `${home}#solutions` },
+  { key: 'offers', href: pathFor('offers', locale) },
+  { key: 'method', href: `${home}#method` },
+  { key: 'faq', href: `${home}#faq` },
+];
+const current = Astro.url.pathname.replace(/\/$/, '');
 ---
 
 <header class="sticky top-0 z-40 border-b border-base-300/60 bg-base-100/80 backdrop-blur">
@@ -20,10 +26,14 @@ const links = ['solutions', 'method', 'faq'];
     <nav class="hidden md:block">
       <ul class="flex gap-8 text-sm font-medium text-base-content/70">
         {
-          links.map((id) => (
+          links.map(({ key, href }) => (
             <li>
-              <a href={`${home}#${id}`} class="transition hover:text-base-content">
-                {t(`nav.${id}`)}
+              <a
+                href={href}
+                class:list={['transition hover:text-base-content', href.replace(/\/$/, '') === current && 'text-base-content']}
+                aria-current={href.replace(/\/$/, '') === current ? 'page' : undefined}
+              >
+                {t(`nav.${key}`)}
               </a>
             </li>
           ))
