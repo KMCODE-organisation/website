@@ -16,6 +16,12 @@ const how = [
   { key: 'care', icon: 'refresh' },
 ];
 
+const customItems = [
+  { key: 'network', icon: 'wifi' },
+  { key: 'storage', icon: 'server' },
+  { key: 'mobileCam', icon: 'camera' },
+];
+
 const optionRows = [
   { key: 'aiVoice', icon: 'sparkles', value: price(options.aiVoice) },
   { key: 'aiCameras', icon: 'sparkles', value: price(options.aiCameras) },
@@ -139,6 +145,25 @@ const carePlans = [
     <Icon name="sparkles" class="mt-0.5 size-4 shrink-0" />
     {t('offers.aiNote')}
   </p>
+</section>
+
+<!-- Sur devis -->
+<section class="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
+  <SectionHeading eyebrow={t('offers.custom.eyebrow')} title={t('offers.custom.title')} subtitle={t('offers.custom.subtitle')} />
+  <div class="mt-10 grid gap-4 md:grid-cols-3">
+    {
+      customItems.map(({ key, icon }) => (
+        <article data-reveal class="rounded-box border border-dashed border-base-content/20 p-6">
+          <span class="grid size-11 place-items-center rounded-2xl bg-primary/10 text-primary">
+            <Icon name={icon} class="size-5" />
+          </span>
+          <h3 class="mt-4 font-bold">{t(`offers.custom.items.${key}.name`)}</h3>
+          <p class="mt-2 text-sm text-base-content/70">{t(`offers.custom.items.${key}.text`)}</p>
+        </article>
+      ))
+    }
+  </div>
+  <p class="mt-4 text-sm text-base-content/60">{t('offers.custom.note')}</p>
 </section>
 
 <!-- Sérénité -->
