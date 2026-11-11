@@ -13,7 +13,8 @@
     "each": "pièce",
     "plus": "+",
     "included": "Inclus",
-    "colon": " :"
+    "colon": " :",
+    "ttc": "TTC"
   },
   "nav": {
     "home": "Accueil",
@@ -23,7 +24,9 @@
     "faq": "FAQ",
     "cta": "Nous contacter",
     "switchLang": "Switch to English",
-    "toggleTheme": "Changer de thème"
+    "toggleTheme": "Changer de thème",
+    "data": "Vos données",
+    "about": "À propos"
   },
   "hero": {
     "eyebrow": "Installation domotique",
@@ -32,7 +35,8 @@
     "subtitle": "Éclairage, chauffage, caméras, assistant vocal : KMCODE installe, configure et suit votre maison connectée. Vos données restent chez vous, et rien ne vous oblige à vous abonner.",
     "ctaPrimary": "Découvrir les offres",
     "ctaSecondary": "Nous écrire",
-    "reassurance": "Diagnostic à 79 €, déduit si vous commandez"
+    "reassurance": "Diagnostic à 79 €, déduit si vous commandez",
+    "zone": "Montpellier et 15 km alentour"
   },
   "trust": {
     "local": "Vos données restent chez vous",
@@ -92,7 +96,7 @@
   "plans": {
     "eyebrow": "Offres",
     "title": "Des forfaits clairs, matériel compris dans le devis",
-    "subtitle": "Un forfait d'installation, le matériel au prix public, et un suivi facultatif. Vous savez exactement ce que vous payez.",
+    "subtitle": "Un forfait d'installation, le matériel au prix public, et un suivi facultatif. Prix TTC : vous savez exactement ce que vous payez.",
     "labor": "Installation",
     "hardware": "Matériel conseillé",
     "popular": "Le plus complet",
@@ -161,7 +165,7 @@
     "items": {
       "home": {
         "title": "Tout reste chez vous",
-        "text": "Historique, réglages et vidéos restent sur votre box. Rien n'est envoyé dans un cloud sans votre accord."
+        "text": "Historique, réglages et vidéos restent sur votre box. Seules les notifications et l'accès à distance passent par des services techniques ; le reste attend votre accord."
       },
       "cameras": {
         "title": "Vos images sont à vous",
@@ -175,7 +179,8 @@
         "title": "Libre de partir",
         "text": "En fin de contrat, nous vous remettons tout et effaçons nos copies sous 30 jours."
       }
-    }
+    },
+    "link": "Où sont vos données, combien de temps, qui y accède : tout le détail"
   },
   "brands": {
     "eyebrow": "Compatibilité",
@@ -209,6 +214,10 @@
       "ai": {
         "q": "Et l'intelligence artificielle ?",
         "a": "Elle est facultative et désactivée par défaut. Si vous l'activez (assistant vocal plus malin, alertes caméras décrites en une phrase), elle fonctionne sur votre propre compte, pour quelques euros par mois payés directement au fournisseur."
+      },
+      "zone": {
+        "q": "Où intervenez-vous ?",
+        "a": "À Montpellier et dans un rayon d'environ 15 km. Au-delà, contactez-nous : nous regardons ensemble ce qui est possible. Le diagnostic peut aussi se faire en visio."
       }
     }
   },
@@ -216,7 +225,8 @@
     "title": "Parlons de votre maison",
     "text": "Décrivez-nous votre projet : nous vous proposons un diagnostic et un devis clair.",
     "button": "Nous écrire",
-    "reassurance": "Diagnostic déduit si vous commandez"
+    "reassurance": "Diagnostic déduit si vous commandez",
+    "phone": "ou appelez le"
   },
   "offers": {
     "eyebrow": "Offres et tarifs",
@@ -329,7 +339,7 @@
       "none": "Sans engagement"
     },
     "careNote": "Sans abonnement, votre installation continue de fonctionner : vous gardez tout, seul le suivi s'arrête.",
-    "footnote": "Tarifs indicatifs. Les travaux électriques (tableau, modules encastrés) sont réalisés par un électricien partenaire assuré, sur devis séparé.",
+    "footnote": "Prix TTC, indicatifs pour le matériel. Intervention à Montpellier et dans un rayon d'environ 15 km. Les travaux électriques (tableau, modules encastrés) sont réalisés par un électricien partenaire assuré, sur devis séparé.",
     "ctaTitle": "Commencez par un diagnostic",
     "ctaText": "Nous faisons le point ensemble et vous recevez un devis détaillé, matériel compris.",
     "carePlans": {
@@ -339,6 +349,418 @@
   },
   "footer": {
     "tagline": "Installation domotique privée et suivie.",
-    "rights": "Tous droits réservés."
+    "rights": "Tous droits réservés.",
+    "zone": "Montpellier et 15 km alentour",
+    "legal": "Mentions légales",
+    "privacy": "Confidentialité",
+    "terms": "CGV",
+    "data": "Vos données",
+    "about": "À propos"
+  },
+  "pages": {
+    "data": {
+      "title": "Vos données",
+      "description": "Où sont vos données, combien de temps elles sont gardées, qui y accède : tout le détail, sans jargon.",
+      "eyebrow": "Transparence",
+      "intro": "Votre maison connectée fonctionne chez vous, sur votre box. Voici précisément ce qui y reste, ce qui en sort, pour combien de temps, et qui peut y accéder.",
+      "sections": [
+        {
+          "title": "En bref",
+          "list": [
+            "Vos réglages, l'historique de vos appareils et les vidéos de vos caméras restent sur votre box, chez vous.",
+            "Seuls deux éléments en sortent vers KMCODE : l'état de santé de l'installation (en ligne, versions, erreurs) et une sauvegarde chiffrée.",
+            "Quelques services techniques font fonctionner les notifications et l'accès à distance. Tout le reste (intelligence artificielle, voix cloud) n'est activé que si vous le demandez.",
+            "Vous êtes propriétaire de tout, et vous pouvez couper notre accès à tout moment."
+          ]
+        },
+        {
+          "title": "Ce qui est conservé, où et combien de temps",
+          "table": {
+            "head": [
+              "Donnée",
+              "Où elle est",
+              "Durée",
+              "Qui y accède"
+            ],
+            "rows": [
+              [
+                "Réglages (appareils, scénarios, tableaux de bord)",
+                "Votre box",
+                "Tant que l'installation existe",
+                "Vous ; KMCODE pour la maintenance"
+              ],
+              [
+                "Historique des appareils (températures, consommation, états)",
+                "Votre box",
+                "10 jours en détail ; moyennes horaires plus longtemps",
+                "Vous"
+              ],
+              [
+                "Vidéos et images des caméras",
+                "Votre box, jamais copiées ailleurs",
+                "3 à 7 jours selon le type (ajustable)",
+                "Vous uniquement"
+              ],
+              [
+                "Voix (assistant vocal)",
+                "Traitée sur votre box",
+                "Rien n'est enregistré",
+                "Personne"
+              ],
+              [
+                "Sauvegardes de l'installation",
+                "Votre box + une copie chiffrée hors de chez vous",
+                "7 quotidiennes + 4 hebdomadaires ; effacées 30 jours après la fin du contrat",
+                "Vous ; KMCODE pour une restauration"
+              ],
+              [
+                "État de santé (en ligne, versions, erreurs)",
+                "Serveur de supervision KMCODE",
+                "90 jours",
+                "KMCODE ; aucune valeur d'appareil, aucune image"
+              ],
+              [
+                "Journal de nos connexions de maintenance",
+                "Serveur de supervision KMCODE",
+                "12 mois",
+                "KMCODE ; transmis sur simple demande"
+              ],
+              [
+                "Coordonnées et factures",
+                "KMCODE",
+                "Durée du contrat, puis 10 ans pour les factures (obligation légale)",
+                "KMCODE"
+              ]
+            ]
+          },
+          "after": [
+            "Les durées des vidéos et de l'historique sont celles que nous configurons par défaut ; vous pouvez les raccourcir ou les allonger."
+          ]
+        },
+        {
+          "title": "Les services extérieurs utilisés",
+          "text": [
+            "Quelques services techniques sont nécessaires au fonctionnement à distance. Ils ne reçoivent que le strict nécessaire, et jamais vos vidéos."
+          ],
+          "table": {
+            "head": [
+              "Service",
+              "À quoi il sert",
+              "Ce qu'il reçoit",
+              "Activé"
+            ],
+            "rows": [
+              [
+                "Relais de notifications de l'application Home Assistant (Nabu Casa), puis Apple ou Google",
+                "Faire arriver les alertes sur votre téléphone",
+                "Le texte de la notification ; l'image est récupérée par votre téléphone directement sur votre box",
+                "Par défaut, si vous utilisez l'application"
+              ],
+              [
+                "Tailscale",
+                "Accéder à votre maison à distance sans rien ouvrir sur votre box internet",
+                "Les informations de connexion ; les échanges sont chiffrés de bout en bout",
+                "Par défaut"
+              ],
+              [
+                "Nabu Casa (voix cloud)",
+                "Une reconnaissance vocale plus rapide en français",
+                "L'audio de vos demandes vocales",
+                "Seulement si vous le choisissez"
+              ],
+              [
+                "Anthropic ou Google (intelligence artificielle)",
+                "Assistant vocal plus malin, alertes caméras décrites",
+                "Le texte de vos demandes ; quelques images des caméras que vous choisissez",
+                "Seulement si vous l'activez, sur votre propre compte"
+              ],
+              [
+                "Hébergement des sauvegardes",
+                "Garder une copie hors de chez vous",
+                "Une sauvegarde chiffrée, illisible sans la clé",
+                "Avec l'abonnement Sérénité"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "Nos engagements",
+          "list": [
+            "Caméras : techniquement, un administrateur peut tout voir. Nous nous engageons par écrit à ne jamais consulter vos images, et chacune de nos connexions est enregistrée.",
+            "Accès de maintenance : un compte KMCODE distinct du vôtre, que vous pouvez désactiver à tout moment.",
+            "Clé des sauvegardes : elle vous est remise. Nous en gardons une copie scellée, utilisée uniquement à votre demande pour restaurer votre installation.",
+            "Intelligence artificielle : désactivée par défaut. Pour les caméras, vous choisissez lesquelles, une par une ; jamais les chambres sans votre demande expresse.",
+            "Propriété : le matériel, les comptes administrateur, les mots de passe et les données sont à vous.",
+            "Départ : en fin de contrat, nous vous remettons la documentation et les accès, supprimons notre compte et notre accès à distance, puis effaçons nos copies sous 30 jours, avec une attestation écrite."
+          ]
+        },
+        {
+          "title": "Vos droits",
+          "text": [
+            "Vous pouvez à tout moment demander l'accès, la rectification ou la suppression des données que KMCODE détient sur vous, en écrivant à {email}. Le détail figure dans notre politique de confidentialité."
+          ]
+        }
+      ]
+    },
+    "about": {
+      "title": "Qui sommes-nous",
+      "description": "KMCODE, installation domotique à Montpellier : un développeur passionné de domotique, qui installe chez vous ce qu'il utilise chez lui.",
+      "eyebrow": "À propos",
+      "intro": "KMCODE, c'est Kevin Morize : développeur dans de grandes entreprises, passionné de domotique et de nouvelles technologies, installé à Montpellier.",
+      "sections": [
+        {
+          "title": "Pourquoi KMCODE",
+          "text": [
+            "La maison connectée est souvent vendue avec un abonnement obligatoire, un cloud lointain et des appareils qui ne se parlent pas. Nous pensons qu'elle doit d'abord fonctionner chez vous, rester à vous, et continuer de marcher même sans internet.",
+            "KMCODE installe des maisons connectées locales, privées et suivies : vous gardez la main, et nous veillons sur l'installation si vous le souhaitez."
+          ]
+        },
+        {
+          "title": "Testé d'abord à la maison",
+          "text": [
+            "Tout ce que nous proposons fonctionne au quotidien chez Kevin avant d'être installé chez vous : éclairage et chauffage pilotés, caméras qui reconnaissent une personne ou des pleurs de bébé, tablette murale, assistant vocal, suivi de la consommation, alertes en cas de coupure de courant."
+          ],
+          "list": [
+            "Une exigence de développeur : du matériel fiable, des mises à jour vérifiées avant d'être installées, des sauvegardes.",
+            "Une exigence de vie privée : vos données restent chez vous, et nos engagements sont écrits.",
+            "Une exigence de clarté : des forfaits à prix fixe et le matériel au prix public."
+          ]
+        },
+        {
+          "title": "Où nous intervenons",
+          "text": [
+            "À Montpellier et dans un rayon d'environ 15 km. Au-delà, contactez-nous : nous regardons ensemble ce qui est possible. Le diagnostic peut aussi se faire en visio, où que vous soyez."
+          ]
+        },
+        {
+          "title": "Nous contacter",
+          "list": [
+            "Par e-mail : {email}",
+            "Par téléphone : {phone}"
+          ]
+        }
+      ]
+    },
+    "legal": {
+      "title": "Mentions légales",
+      "description": "Mentions légales du site kmcode.fr : éditeur, hébergeur, propriété intellectuelle.",
+      "eyebrow": "Informations légales",
+      "updated": "Dernière mise à jour : 11 novembre 2026",
+      "sections": [
+        {
+          "title": "Éditeur du site",
+          "list": [
+            "{name}, {form} au capital de {capital}",
+            "Siège social : {address}",
+            "{rcs} — SIREN {siren}",
+            "TVA intracommunautaire : {vat}",
+            "E-mail : {email} — Téléphone : {phone}",
+            "Directeur de la publication : {director}, Président"
+          ]
+        },
+        {
+          "title": "Hébergement",
+          "text": [
+            "Le site est hébergé par Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis — vercel.com."
+          ]
+        },
+        {
+          "title": "Propriété intellectuelle",
+          "text": [
+            "Les textes, le logo et la charte graphique de KMCODE sont protégés. Toute reproduction sans autorisation écrite est interdite.",
+            "Les marques citées (IKEA, Sonos, Bosch, LG, Xiaomi, Reolink, Sonoff, SwitchBot, Voltalis, iRobot Roomba…) appartiennent à leurs propriétaires respectifs ; elles sont mentionnées uniquement pour indiquer la compatibilité, sans partenariat.",
+            "Icônes : Lucide (licence ISC). Police : Quicksand (licence SIL Open Font)."
+          ]
+        },
+        {
+          "title": "Données personnelles et cookies",
+          "text": [
+            "Ce site ne dépose aucun cookie et ne contient aucun outil de mesure d'audience ni aucun service tiers. Seul votre choix de thème (clair ou sombre) est mémorisé dans votre navigateur. Voir la politique de confidentialité pour le reste."
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Politique de confidentialité",
+      "description": "Comment KMCODE traite vos données personnelles : site, prospects, clients et installations.",
+      "eyebrow": "Informations légales",
+      "updated": "Dernière mise à jour : 11 novembre 2026",
+      "intro": "Cette politique explique quelles données personnelles KMCODE traite, pourquoi, combien de temps, et comment exercer vos droits. Pour les données de votre installation domotique, voir aussi la page « Vos données ».",
+      "sections": [
+        {
+          "title": "Responsable du traitement",
+          "text": [
+            "{name}, {form}, {address}, représentée par {director}, Président. Contact : {email}."
+          ]
+        },
+        {
+          "title": "Le site kmcode.fr",
+          "text": [
+            "Le site ne dépose aucun cookie, ne mesure pas l'audience et ne charge aucun service tiers. Votre choix de thème est enregistré dans votre navigateur (stockage local) et n'est jamais transmis. L'hébergeur (Vercel) enregistre des journaux techniques de connexion pour assurer la sécurité du service."
+          ]
+        },
+        {
+          "title": "Les données que nous traitons",
+          "table": {
+            "head": [
+              "Qui",
+              "Données",
+              "Pourquoi",
+              "Base légale",
+              "Durée"
+            ],
+            "rows": [
+              [
+                "Vous nous écrivez",
+                "Nom, e-mail, téléphone, contenu du message",
+                "Répondre, établir un devis",
+                "Mesures précontractuelles",
+                "3 ans après le dernier échange"
+              ],
+              [
+                "Clients",
+                "Identité, adresse, coordonnées, devis, factures",
+                "Exécuter le contrat, facturer",
+                "Contrat ; obligation légale",
+                "Durée du contrat + 5 ans ; factures 10 ans"
+              ],
+              [
+                "Clients Sérénité",
+                "État de santé de l'installation, journal des connexions de maintenance",
+                "Surveiller, dépanner, prouver nos engagements",
+                "Contrat",
+                "90 jours ; journal 12 mois"
+              ],
+              [
+                "Clients Sérénité",
+                "Sauvegarde chiffrée de l'installation",
+                "Restaurer en cas de panne",
+                "Contrat",
+                "7 quotidiennes + 4 hebdomadaires ; effacées 30 jours après la fin du contrat"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "Les données de votre installation",
+          "text": [
+            "Les données produites par votre maison (historique des appareils, vidéos, voix) restent sur votre box et ne sont pas traitées par KMCODE. Lors de la maintenance, nous agissons pour votre compte et selon vos instructions, dans le respect des engagements décrits sur la page « Vos données » : aucune consultation des caméras, connexions journalisées, accès révocable à tout moment.",
+            "Les options d'intelligence artificielle fonctionnent sur votre propre compte auprès du fournisseur choisi (Anthropic ou Google), selon ses propres conditions, que nous vous communiquons avant activation."
+          ]
+        },
+        {
+          "title": "Destinataires et sous-traitants",
+          "list": [
+            "Hébergement du site : Vercel Inc. (États-Unis).",
+            "Messagerie électronique : Hostinger.",
+            "Accès à distance aux installations : Tailscale (connexions chiffrées de bout en bout).",
+            "Hébergement des sauvegardes chiffrées : prestataire situé dans l'Union européenne.",
+            "Nous ne vendons ni ne louons aucune donnée."
+          ],
+          "after": [
+            "Certains de ces prestataires sont établis hors de l'Union européenne ; les transferts sont encadrés par les garanties prévues par le RGPD (décision d'adéquation ou clauses contractuelles types)."
+          ]
+        },
+        {
+          "title": "Vos droits",
+          "text": [
+            "Vous disposez des droits d'accès, de rectification, d'effacement, de limitation, d'opposition et de portabilité. Écrivez à {email} ; nous répondons sous un mois.",
+            "Si vous estimez que vos droits ne sont pas respectés, vous pouvez saisir la CNIL (cnil.fr)."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Conditions générales de vente",
+      "description": "Conditions générales de vente de KMCODE : diagnostic, installation domotique et abonnements Sérénité.",
+      "eyebrow": "Informations légales",
+      "updated": "Version du 11 novembre 2026",
+      "intro": "Les présentes conditions s'appliquent aux prestations de {name} ({form}, {rcs}, {address}) auprès des particuliers : diagnostic, installation domotique, options et abonnements Sérénité.",
+      "sections": [
+        {
+          "title": "1. Devis et commande",
+          "text": [
+            "Toute installation fait l'objet d'un devis détaillé (forfait, options, matériel), valable 30 jours. La commande est formée par la signature du devis et le versement de l'acompte.",
+            "Le diagnostic (79 € TTC) est facturé séparément ; son montant est déduit de l'installation si vous la commandez dans les 30 jours."
+          ]
+        },
+        {
+          "title": "2. Prix",
+          "text": [
+            "Les prix sont indiqués en euros, toutes taxes comprises (TTC). Le matériel est facturé au prix public indiqué sur le devis ; vous pouvez aussi l'acheter vous-même sur la liste que nous vous remettons.",
+            "Le déplacement est inclus à Montpellier et dans un rayon d'environ 15 km. Au-delà, les éventuels frais de déplacement sont indiqués sur le devis."
+          ]
+        },
+        {
+          "title": "3. Paiement",
+          "list": [
+            "Installation : acompte de 30 % à la commande, solde à la fin de l'installation, par virement bancaire.",
+            "Abonnement Sérénité : mensuel, par prélèvement SEPA ou par virement, en début de mois.",
+            "En cas de retard de paiement, des pénalités au taux d'intérêt légal peuvent être appliquées après mise en demeure."
+          ]
+        },
+        {
+          "title": "4. Droit de rétractation",
+          "text": [
+            "Lorsque le contrat est conclu à votre domicile ou à distance, vous disposez de 14 jours pour vous rétracter, sans motif, à compter de la signature (prestations) ou de la réception du matériel (matériel fourni par KMCODE). Il suffit de nous le notifier par e-mail à {email}, par exemple avec le formulaire ci-dessous.",
+            "Si vous demandez expressément que l'installation commence avant la fin de ce délai, le montant correspondant au travail déjà réalisé reste dû en cas de rétractation. Le droit de rétractation ne peut plus être exercé pour une prestation pleinement exécutée avec votre accord exprès."
+          ]
+        },
+        {
+          "title": "5. Réalisation de l'installation",
+          "text": [
+            "Nous convenons ensemble d'une date. Vous nous donnez accès aux lieux, à votre connexion internet et aux comptes des appareils existants. L'installation se termine par une prise en main avec vous.",
+            "Les travaux électriques (tableau, modules encastrés) ne sont pas réalisés par KMCODE : ils sont confiés à un électricien partenaire assuré, sur devis séparé."
+          ]
+        },
+        {
+          "title": "6. Matériel et garanties",
+          "text": [
+            "Le matériel fourni par KMCODE vous appartient dès son paiement complet. Il bénéficie de la garantie légale de conformité (2 ans) et de la garantie des vices cachés, ainsi que de la garantie du fabricant.",
+            "Notre travail est garanti 3 mois : pendant cette période, nous corrigeons gratuitement tout défaut de configuration réalisée par nos soins."
+          ]
+        },
+        {
+          "title": "7. Abonnements Sérénité",
+          "text": [
+            "Les abonnements Sérénité (19 € TTC/mois) et Sérénité+ (35 € TTC/mois) sont sans engagement. Leur contenu est décrit sur la page Offres. Vous pouvez résilier à tout moment par e-mail ; la résiliation prend effet à la fin du mois en cours.",
+            "Nous nous engageons à prendre en charge vos demandes sous 2 jours ouvrés (Sérénité) ou 1 jour ouvré (Sérénité+). Sont exclues : les pannes de matériel, de votre connexion internet ou des services de tiers, et les modifications au-delà de ce que prévoit votre formule."
+          ]
+        },
+        {
+          "title": "8. Responsabilité",
+          "text": [
+            "KMCODE est tenue d'une obligation de moyens. Les caméras et détections proposées ne constituent pas une alarme certifiée ni un service de télésurveillance, et ne remplacent pas une installation reconnue par les assureurs.",
+            "Les options d'intelligence artificielle et les services de tiers fonctionnent selon les conditions de leurs fournisseurs."
+          ]
+        },
+        {
+          "title": "9. Données personnelles",
+          "text": [
+            "Le traitement de vos données est décrit dans la politique de confidentialité et sur la page « Vos données », dont les engagements font partie du contrat."
+          ]
+        },
+        {
+          "title": "10. Fin de contrat et réversibilité",
+          "text": [
+            "À la fin d'un abonnement, votre installation continue de fonctionner. Nous vous remettons la documentation et les accès, supprimons notre compte et notre accès à distance, et effaçons nos copies de sauvegarde sous 30 jours."
+          ]
+        },
+        {
+          "title": "11. Réclamations et médiation",
+          "text": [
+            "Pour toute réclamation, écrivez-nous à {email}. À défaut d'accord, vous pouvez recourir gratuitement au médiateur de la consommation : {mediator}.",
+            "Les présentes conditions sont soumises au droit français."
+          ]
+        },
+        {
+          "title": "Formulaire de rétractation",
+          "text": [
+            "À l'attention de {name}, {address}, {email} :",
+            "Je vous notifie par la présente ma rétractation du contrat portant sur la prestation ou le matériel ci-dessous : … Commandé le : … Nom : … Adresse : … Date et signature (en cas d'envoi papier) : …"
+          ]
+        }
+      ]
+    }
   }
 }

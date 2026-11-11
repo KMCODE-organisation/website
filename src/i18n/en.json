@@ -13,7 +13,8 @@
     "each": "each",
     "plus": "+",
     "included": "Included",
-    "colon": ":"
+    "colon": ":",
+    "ttc": "incl. VAT"
   },
   "nav": {
     "home": "Home",
@@ -23,7 +24,9 @@
     "faq": "FAQ",
     "cta": "Contact us",
     "switchLang": "Passer en français",
-    "toggleTheme": "Toggle theme"
+    "toggleTheme": "Toggle theme",
+    "data": "Your data",
+    "about": "About"
   },
   "hero": {
     "eyebrow": "Smart home installation",
@@ -32,7 +35,8 @@
     "subtitle": "Lighting, heating, cameras, voice assistant: KMCODE installs, configures and looks after your smart home. Your data stays at home, and nothing forces you to subscribe.",
     "ctaPrimary": "See our plans",
     "ctaSecondary": "Write to us",
-    "reassurance": "€79 assessment, deducted if you order"
+    "reassurance": "€79 assessment, deducted if you order",
+    "zone": "Montpellier and 15 km around"
   },
   "trust": {
     "local": "Your data stays at home",
@@ -92,7 +96,7 @@
   "plans": {
     "eyebrow": "Plans",
     "title": "Clear packages, hardware included in the quote",
-    "subtitle": "A fixed installation fee, hardware at retail price, and optional support. You know exactly what you pay for.",
+    "subtitle": "A fixed installation fee, hardware at retail price, and optional support. You know exactly what you pay for. Prices include VAT.",
     "labor": "Installation",
     "hardware": "Recommended hardware",
     "popular": "Most complete",
@@ -161,7 +165,7 @@
     "items": {
       "home": {
         "title": "Everything stays at home",
-        "text": "History, settings and videos stay on your hub. Nothing goes to a cloud without your consent."
+        "text": "History, settings and footage stay on your hub. Only notifications and remote access go through technical services; everything else waits for your consent."
       },
       "cameras": {
         "title": "Your images are yours",
@@ -175,7 +179,8 @@
         "title": "Free to leave",
         "text": "When the contract ends, we hand everything over and delete our copies within 30 days."
       }
-    }
+    },
+    "link": "Where your data lives, for how long, who can access it: the full picture"
   },
   "brands": {
     "eyebrow": "Compatibility",
@@ -209,6 +214,10 @@
       "ai": {
         "q": "What about artificial intelligence?",
         "a": "It's optional and off by default. If you turn it on (a smarter voice assistant, camera alerts described in one sentence), it runs on your own account, for a few euros a month paid directly to the provider."
+      },
+      "zone": {
+        "q": "Where do you work?",
+        "a": "In Montpellier and within about 15 km. Further away, get in touch: we'll see together what is possible. The assessment can also be done by video call."
       }
     }
   },
@@ -216,7 +225,8 @@
     "title": "Let's talk about your home",
     "text": "Tell us about your project: we'll offer an assessment and a clear quote.",
     "button": "Write to us",
-    "reassurance": "Assessment deducted if you order"
+    "reassurance": "Assessment deducted if you order",
+    "phone": "or call"
   },
   "offers": {
     "eyebrow": "Plans and pricing",
@@ -329,7 +339,7 @@
       "none": "No commitment"
     },
     "careNote": "Without a subscription, your installation keeps working: you keep everything, only the support stops.",
-    "footnote": "Indicative prices. Electrical work (fuse box, in-wall modules) is done by a partner insured electrician, quoted separately.",
+    "footnote": "Prices include VAT; hardware prices are indicative. We work in Montpellier and within about 15 km. Electrical work (fuse board, in-wall modules) is carried out by an insured partner electrician, under a separate quote.",
     "ctaTitle": "Start with an assessment",
     "ctaText": "We review everything together and you receive a detailed quote, hardware included.",
     "carePlans": {
@@ -339,6 +349,418 @@
   },
   "footer": {
     "tagline": "Private, supported smart home installation.",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "zone": "Montpellier and 15 km around",
+    "legal": "Legal notice",
+    "privacy": "Privacy",
+    "terms": "Terms of sale",
+    "data": "Your data",
+    "about": "About"
+  },
+  "pages": {
+    "data": {
+      "title": "Your data",
+      "description": "Where your data lives, how long it is kept and who can access it: the full picture, in plain words.",
+      "eyebrow": "Transparency",
+      "intro": "Your smart home runs at your place, on your hub. Here is exactly what stays there, what leaves, for how long, and who can access it.",
+      "sections": [
+        {
+          "title": "In short",
+          "list": [
+            "Your settings, device history and camera footage stay on your hub, at home.",
+            "Only two things go to KMCODE: the health status of your installation (online, versions, errors) and an encrypted backup.",
+            "A few technical services make notifications and remote access work. Everything else (artificial intelligence, cloud voice) is only enabled if you ask for it.",
+            "You own everything, and you can cut our access at any time."
+          ]
+        },
+        {
+          "title": "What is kept, where and for how long",
+          "table": {
+            "head": [
+              "Data",
+              "Where it lives",
+              "Retention",
+              "Who can access it"
+            ],
+            "rows": [
+              [
+                "Settings (devices, scenes, dashboards)",
+                "Your hub",
+                "As long as the installation exists",
+                "You; KMCODE for maintenance"
+              ],
+              [
+                "Device history (temperatures, energy, states)",
+                "Your hub",
+                "10 days in detail; hourly averages kept longer",
+                "You"
+              ],
+              [
+                "Camera footage and pictures",
+                "Your hub, never copied elsewhere",
+                "3 to 7 days depending on type (adjustable)",
+                "You only"
+              ],
+              [
+                "Voice (voice assistant)",
+                "Processed on your hub",
+                "Nothing is recorded",
+                "No one"
+              ],
+              [
+                "Installation backups",
+                "Your hub + an encrypted off-site copy",
+                "7 daily + 4 weekly; deleted 30 days after the contract ends",
+                "You; KMCODE to restore"
+              ],
+              [
+                "Health status (online, versions, errors)",
+                "KMCODE monitoring server",
+                "90 days",
+                "KMCODE; no device values, no images"
+              ],
+              [
+                "Log of our maintenance connections",
+                "KMCODE monitoring server",
+                "12 months",
+                "KMCODE; sent to you on request"
+              ],
+              [
+                "Contact details and invoices",
+                "KMCODE",
+                "Contract duration, then 10 years for invoices (legal requirement)",
+                "KMCODE"
+              ]
+            ]
+          },
+          "after": [
+            "Footage and history retention are our default settings; you can shorten or extend them."
+          ]
+        },
+        {
+          "title": "Third-party services we use",
+          "text": [
+            "A few technical services are needed for remote use. They only receive what is strictly necessary, and never your footage."
+          ],
+          "table": {
+            "head": [
+              "Service",
+              "Purpose",
+              "What it receives",
+              "Enabled"
+            ],
+            "rows": [
+              [
+                "Home Assistant app notification relay (Nabu Casa), then Apple or Google",
+                "Delivering alerts to your phone",
+                "The notification text; the picture is fetched by your phone directly from your hub",
+                "By default, if you use the app"
+              ],
+              [
+                "Tailscale",
+                "Reaching your home remotely without opening anything on your router",
+                "Connection information; traffic is end-to-end encrypted",
+                "By default"
+              ],
+              [
+                "Nabu Casa (cloud voice)",
+                "Faster speech recognition",
+                "The audio of your voice requests",
+                "Only if you choose it"
+              ],
+              [
+                "Anthropic or Google (artificial intelligence)",
+                "Smarter voice assistant, described camera alerts",
+                "The text of your requests; a few pictures from the cameras you choose",
+                "Only if you enable it, on your own account"
+              ],
+              [
+                "Backup hosting",
+                "Keeping a copy outside your home",
+                "An encrypted backup, unreadable without the key",
+                "With the Serenity plan"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "Our commitments",
+          "list": [
+            "Cameras: technically, an administrator can see everything. We commit in writing to never view your footage, and every connection we make is logged.",
+            "Maintenance access: a KMCODE account separate from yours, which you can disable at any time.",
+            "Backup key: it is handed to you. We keep a sealed copy, used only at your request to restore your installation.",
+            "Artificial intelligence: off by default. For cameras, you pick which ones, one by one; never bedrooms without your explicit request.",
+            "Ownership: the hardware, administrator accounts, passwords and data are yours.",
+            "Leaving: when the contract ends, we hand over the documentation and access, remove our account and remote access, then delete our copies within 30 days, with a written confirmation."
+          ]
+        },
+        {
+          "title": "Your rights",
+          "text": [
+            "You can ask at any time to access, correct or delete the data KMCODE holds about you by writing to {email}. Details are in our privacy policy."
+          ]
+        }
+      ]
+    },
+    "about": {
+      "title": "About us",
+      "description": "KMCODE, smart home installation in Montpellier: a developer passionate about home automation, installing at your place what he uses at home.",
+      "eyebrow": "About",
+      "intro": "KMCODE is Kevin Morize: a developer who has worked for large companies, passionate about home automation and new technology, based in Montpellier.",
+      "sections": [
+        {
+          "title": "Why KMCODE",
+          "text": [
+            "Smart homes are often sold with a mandatory subscription, a distant cloud and devices that don't talk to each other. We believe a smart home should run at your place first, stay yours, and keep working even without internet.",
+            "KMCODE installs smart homes that are local, private and looked after: you stay in control, and we watch over the installation if you wish."
+          ]
+        },
+        {
+          "title": "Tested at home first",
+          "text": [
+            "Everything we offer runs every day at Kevin's home before being installed at yours: smart lighting and heating, cameras that recognise a person or a crying baby, a wall tablet, a voice assistant, energy tracking, power-cut alerts."
+          ],
+          "list": [
+            "A developer's standards: reliable hardware, updates checked before being installed, backups.",
+            "A privacy standard: your data stays at home, and our commitments are in writing.",
+            "A clarity standard: fixed-price packages and hardware at retail price."
+          ]
+        },
+        {
+          "title": "Where we work",
+          "text": [
+            "In Montpellier and within about 15 km. Further away, get in touch: we'll see together what is possible. The assessment can also be done by video call, wherever you are."
+          ]
+        },
+        {
+          "title": "Contact us",
+          "list": [
+            "By email: {email}",
+            "By phone: {phone}"
+          ]
+        }
+      ]
+    },
+    "legal": {
+      "title": "Legal notice",
+      "description": "Legal notice for kmcode.fr: publisher, host, intellectual property.",
+      "eyebrow": "Legal information",
+      "updated": "Last updated: 11 November 2026",
+      "sections": [
+        {
+          "title": "Publisher",
+          "list": [
+            "{name}, {form} (simplified joint-stock company) with share capital of {capital}",
+            "Registered office: {address}, France",
+            "{rcs} — SIREN {siren}",
+            "EU VAT number: {vat}",
+            "Email: {email} — Phone: {phone}",
+            "Publication director: {director}, President"
+          ]
+        },
+        {
+          "title": "Hosting",
+          "text": [
+            "The site is hosted by Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA — vercel.com."
+          ]
+        },
+        {
+          "title": "Intellectual property",
+          "text": [
+            "KMCODE's texts, logo and visual identity are protected. Any reproduction without written permission is prohibited.",
+            "The brands mentioned (IKEA, Sonos, Bosch, LG, Xiaomi, Reolink, Sonoff, SwitchBot, Voltalis, iRobot Roomba…) belong to their respective owners; they are cited only to indicate compatibility, with no partnership implied.",
+            "Icons: Lucide (ISC licence). Font: Quicksand (SIL Open Font Licence)."
+          ]
+        },
+        {
+          "title": "Personal data and cookies",
+          "text": [
+            "This site sets no cookies and uses no analytics or third-party services. Only your theme choice (light or dark) is remembered in your browser. See the privacy policy for the rest."
+          ]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Privacy policy",
+      "description": "How KMCODE handles your personal data: website, prospects, customers and installations.",
+      "eyebrow": "Legal information",
+      "updated": "Last updated: 11 November 2026",
+      "intro": "This policy explains which personal data KMCODE processes, why, for how long, and how to exercise your rights. For the data of your smart home itself, see also the “Your data” page. The French version prevails.",
+      "sections": [
+        {
+          "title": "Data controller",
+          "text": [
+            "{name}, {form}, {address}, France, represented by {director}, President. Contact: {email}."
+          ]
+        },
+        {
+          "title": "The kmcode.fr website",
+          "text": [
+            "The site sets no cookies, does not measure traffic and loads no third-party services. Your theme choice is stored in your browser (local storage) and never sent. The host (Vercel) keeps technical connection logs to secure the service."
+          ]
+        },
+        {
+          "title": "Data we process",
+          "table": {
+            "head": [
+              "Who",
+              "Data",
+              "Why",
+              "Legal basis",
+              "Retention"
+            ],
+            "rows": [
+              [
+                "You write to us",
+                "Name, email, phone, message",
+                "Reply, prepare a quote",
+                "Pre-contractual steps",
+                "3 years after the last exchange"
+              ],
+              [
+                "Customers",
+                "Identity, address, contact details, quotes, invoices",
+                "Perform the contract, invoice",
+                "Contract; legal obligation",
+                "Contract + 5 years; invoices 10 years"
+              ],
+              [
+                "Serenity customers",
+                "Installation health status, maintenance connection log",
+                "Monitor, troubleshoot, prove our commitments",
+                "Contract",
+                "90 days; log 12 months"
+              ],
+              [
+                "Serenity customers",
+                "Encrypted installation backup",
+                "Restore after a failure",
+                "Contract",
+                "7 daily + 4 weekly; deleted 30 days after the contract ends"
+              ]
+            ]
+          }
+        },
+        {
+          "title": "Your installation's data",
+          "text": [
+            "Data produced by your home (device history, footage, voice) stays on your hub and is not processed by KMCODE. During maintenance we act on your behalf and on your instructions, within the commitments on the “Your data” page: no viewing of cameras, logged connections, access revocable at any time.",
+            "Artificial intelligence options run on your own account with the provider you choose (Anthropic or Google), under their own terms, which we share with you before activation."
+          ]
+        },
+        {
+          "title": "Recipients and processors",
+          "list": [
+            "Website hosting: Vercel Inc. (USA).",
+            "Email: Hostinger.",
+            "Remote access to installations: Tailscale (end-to-end encrypted connections).",
+            "Encrypted backup hosting: provider located in the European Union.",
+            "We never sell or rent any data."
+          ],
+          "after": [
+            "Some of these providers are based outside the European Union; transfers are covered by the safeguards of the GDPR (adequacy decision or standard contractual clauses)."
+          ]
+        },
+        {
+          "title": "Your rights",
+          "text": [
+            "You have the rights of access, rectification, erasure, restriction, objection and portability. Write to {email}; we reply within one month.",
+            "If you believe your rights are not respected, you can lodge a complaint with the CNIL (cnil.fr), the French data protection authority."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of sale",
+      "description": "KMCODE terms of sale: assessment, smart home installation and Serenity plans.",
+      "eyebrow": "Legal information",
+      "updated": "Version of 11 November 2026",
+      "intro": "These terms apply to the services of {name} ({form}, {rcs}, {address}, France) for private customers: assessment, smart home installation, options and Serenity plans. This translation is provided for convenience; the French version prevails.",
+      "sections": [
+        {
+          "title": "1. Quote and order",
+          "text": [
+            "Every installation is covered by a detailed quote (package, options, hardware), valid for 30 days. The order is placed when the quote is signed and the deposit paid.",
+            "The assessment (€79 incl. VAT) is invoiced separately; its amount is deducted from the installation if you order it within 30 days."
+          ]
+        },
+        {
+          "title": "2. Prices",
+          "text": [
+            "Prices are in euros, including VAT. Hardware is invoiced at the retail price shown on the quote; you may also buy it yourself from the list we provide.",
+            "Travel is included in Montpellier and within about 15 km. Beyond that, any travel costs are shown on the quote."
+          ]
+        },
+        {
+          "title": "3. Payment",
+          "list": [
+            "Installation: 30% deposit on order, balance at the end of the installation, by bank transfer.",
+            "Serenity plan: monthly, by SEPA direct debit or bank transfer, at the start of each month.",
+            "Late payments may incur interest at the French statutory rate after formal notice."
+          ]
+        },
+        {
+          "title": "4. Right of withdrawal",
+          "text": [
+            "When the contract is concluded at your home or at a distance, you have 14 days to withdraw, without giving a reason, from signature (services) or receipt of the hardware (hardware supplied by KMCODE). Simply notify us by email at {email}, for example using the form below.",
+            "If you expressly ask for the installation to start before this period ends, the amount for work already done remains due if you withdraw. The right of withdrawal no longer applies to a service fully performed with your express consent."
+          ]
+        },
+        {
+          "title": "5. Carrying out the installation",
+          "text": [
+            "We agree on a date together. You give us access to the premises, your internet connection and the accounts of existing devices. The installation ends with a hands-on walkthrough with you.",
+            "Electrical work (fuse board, in-wall modules) is not carried out by KMCODE: it is entrusted to an insured partner electrician, under a separate quote."
+          ]
+        },
+        {
+          "title": "6. Hardware and warranties",
+          "text": [
+            "Hardware supplied by KMCODE becomes yours once fully paid. It is covered by the French legal guarantee of conformity (2 years) and the guarantee against hidden defects, as well as the manufacturer's warranty.",
+            "Our work is guaranteed for 3 months: during this period we fix free of charge any configuration fault on our side."
+          ]
+        },
+        {
+          "title": "7. Serenity plans",
+          "text": [
+            "The Serenity (€19 incl. VAT/month) and Serenity+ (€35 incl. VAT/month) plans have no commitment. Their content is described on the Offers page. You can cancel at any time by email; cancellation takes effect at the end of the current month.",
+            "We commit to handling your requests within 2 business days (Serenity) or 1 business day (Serenity+). Excluded: failures of hardware, of your internet connection or of third-party services, and changes beyond what your plan includes."
+          ]
+        },
+        {
+          "title": "8. Liability",
+          "text": [
+            "KMCODE is bound by an obligation of means. The cameras and detections offered are not a certified alarm or monitoring service and do not replace an installation recognised by insurers.",
+            "Artificial intelligence options and third-party services operate under their providers' terms."
+          ]
+        },
+        {
+          "title": "9. Personal data",
+          "text": [
+            "The processing of your data is described in the privacy policy and on the “Your data” page, whose commitments are part of the contract."
+          ]
+        },
+        {
+          "title": "10. End of contract and reversibility",
+          "text": [
+            "When a plan ends, your installation keeps working. We hand over the documentation and access, remove our account and remote access, and delete our backup copies within 30 days."
+          ]
+        },
+        {
+          "title": "11. Complaints and mediation",
+          "text": [
+            "For any complaint, write to us at {email}. If no agreement is reached, you may use the consumer mediator free of charge: {mediator}.",
+            "These terms are governed by French law."
+          ]
+        },
+        {
+          "title": "Withdrawal form",
+          "text": [
+            "To {name}, {address}, France, {email}:",
+            "I hereby give notice that I withdraw from the contract for the following service or hardware: … Ordered on: … Name: … Address: … Date and signature (if sent on paper): …"
+          ]
+        }
+      ]
+    }
   }
 }

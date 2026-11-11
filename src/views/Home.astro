@@ -11,6 +11,7 @@ import { defaultLocale, pathFor, useTranslations } from '../i18n/index.js';
 const locale = Astro.currentLocale ?? defaultLocale;
 const t = useTranslations(locale);
 const offersUrl = pathFor('offers', locale);
+const dataUrl = pathFor('data', locale);
 
 const trust = [
   { key: 'local', icon: 'house' },
@@ -40,7 +41,7 @@ const privacy = [
 ];
 // Marques déjà intégrées en production (doc d'offre, section « Capacités »).
 const brands = ['IKEA', 'Sonos', 'Bosch', 'LG', 'Xiaomi', 'Reolink', 'Sonoff', 'SwitchBot', 'Voltalis', 'iRobot Roomba'];
-const faq = ['subscription', 'hardware', 'works', 'internet', 'alarm', 'ai'];
+const faq = ['zone', 'subscription', 'hardware', 'works', 'internet', 'alarm', 'ai'];
 ---
 
 <!-- Hero -->
@@ -66,6 +67,10 @@ const faq = ['subscription', 'hardware', 'works', 'internet', 'alarm', 'ai'];
       <p class="mt-4 flex items-center gap-2 text-sm text-base-content/60">
         <Icon name="check" class="size-4 text-accent" />
         {t('hero.reassurance')}
+      </p>
+      <p class="mt-2 flex items-center gap-2 text-sm text-base-content/60">
+        <Icon name="mapPin" class="size-4 text-accent" />
+        {t('hero.zone')}
       </p>
     </div>
     <HeroVisual />
@@ -184,6 +189,10 @@ const faq = ['subscription', 'hardware', 'works', 'internet', 'alarm', 'ai'];
       ))
     }
   </div>
+  <a href={dataUrl} class="btn btn-outline mt-10 border-base-content/20">
+    {t('privacy.link')}
+    <Icon name="arrowRight" class="size-4" />
+  </a>
 </section>
 
 <!-- Compatibilité -->

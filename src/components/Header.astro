@@ -12,7 +12,8 @@ const home = getRelativeLocaleUrl(locale);
 const links = [
   { key: 'solutions', href: `${home}#solutions` },
   { key: 'offers', href: pathFor('offers', locale) },
-  { key: 'method', href: `${home}#method` },
+  { key: 'data', href: pathFor('data', locale) },
+  { key: 'about', href: pathFor('about', locale) },
   { key: 'faq', href: `${home}#faq` },
 ];
 const current = Astro.url.pathname.replace(/\/$/, '');
