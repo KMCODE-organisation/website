@@ -332,7 +332,7 @@
       "commitment": "Commitment"
     },
     "careValues": {
-      "hourly": "Billed hourly",
+      "hourly": "per hour",
       "included": "1 h per month included",
       "days2": "2 business days",
       "days1": "1 business day",
@@ -517,6 +517,9 @@
             "Backup key: it is handed to you. We keep a sealed copy, used only at your request to restore your installation.",
             "Artificial intelligence: off by default. For cameras, you pick which ones, one by one; never bedrooms without your explicit request.",
             "Ownership: the hardware, administrator accounts, passwords and data are yours.",
+            "Accounts in your name: your installation is never tied to a KMCODE or personal account. Any accounts needed (app, optional subscriptions) are created with your email address, in front of you, and you choose the passwords.",
+            "Local cameras: they connect to your hub with no manufacturer account or cloud service, except mobile-network cameras, which require one.",
+            "Technical passwords (cameras, recovery account): they are handed to you on a paper sheet at installation.",
             "Leaving: when the contract ends, we hand over the documentation and access, remove our account and remote access, then delete our copies within 30 days, with a written confirmation."
           ]
         },
@@ -714,6 +717,7 @@
           "title": "2. Prices",
           "text": [
             "Prices are in euros, including VAT. Hardware is invoiced at the retail price shown on the quote; you may also buy it yourself from the list we provide.",
+            "Any work outside your plan or subscription is billed at €65 per hour, including VAT.",
             "Travel is included in Montpellier and within about 15 km. Beyond that, any travel costs are shown on the quote."
           ]
         },
