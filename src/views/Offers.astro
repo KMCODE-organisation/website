@@ -36,7 +36,7 @@ const careRows = [
   { key: 'updates', values: [true, true] },
   { key: 'backup', values: [true, true] },
   { key: 'remote', values: [true, true] },
-  { key: 'changes', values: [t('offers.careValues.hourly'), t('offers.careValues.included')] },
+  { key: 'changes', values: [`${price(options.hour)} ${t('common.ttc')} ${t('offers.careValues.hourly')}`, t('offers.careValues.included')] },
   { key: 'delay', values: [t('offers.careValues.days2'), t('offers.careValues.days1')] },
   { key: 'commitment', values: [t('offers.careValues.none'), t('offers.careValues.none')] },
 ];

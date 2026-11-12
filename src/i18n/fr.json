@@ -332,7 +332,7 @@
       "commitment": "Engagement"
     },
     "careValues": {
-      "hourly": "Facturées à l'heure",
+      "hourly": "de l'heure",
       "included": "1 h par mois incluse",
       "days2": "2 jours ouvrés",
       "days1": "1 jour ouvré",
@@ -517,6 +517,9 @@
             "Clé des sauvegardes : elle vous est remise. Nous en gardons une copie scellée, utilisée uniquement à votre demande pour restaurer votre installation.",
             "Intelligence artificielle : désactivée par défaut. Pour les caméras, vous choisissez lesquelles, une par une ; jamais les chambres sans votre demande expresse.",
             "Propriété : le matériel, les comptes administrateur, les mots de passe et les données sont à vous.",
+            "Comptes à votre nom : votre installation n'est jamais rattachée à un compte KMCODE ni à un compte personnel. Les comptes nécessaires (application, abonnements facultatifs) sont créés avec votre adresse e-mail, devant vous, et c'est vous qui choisissez les mots de passe.",
+            "Caméras en local : elles sont reliées à votre box sans compte chez le fabricant ni service cloud, sauf les caméras sur réseau mobile, qui en ont besoin.",
+            "Mots de passe techniques (caméras, compte de secours) : ils vous sont remis sur une fiche papier lors de l'installation.",
             "Départ : en fin de contrat, nous vous remettons la documentation et les accès, supprimons notre compte et notre accès à distance, puis effaçons nos copies sous 30 jours, avec une attestation écrite."
           ]
         },
@@ -714,6 +717,7 @@
           "title": "2. Prix",
           "text": [
             "Les prix sont indiqués en euros, toutes taxes comprises (TTC). Le matériel est facturé au prix public indiqué sur le devis ; vous pouvez aussi l'acheter vous-même sur la liste que nous vous remettons.",
+            "Toute intervention hors forfait, ou hors abonnement, est facturée 65 € TTC de l'heure.",
             "Le déplacement est inclus à Montpellier et dans un rayon d'environ 15 km. Au-delà, les éventuels frais de déplacement sont indiqués sur le devis."
           ]
         },
